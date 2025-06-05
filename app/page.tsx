@@ -1,5 +1,5 @@
 import Hero from "../components/Hero"
-import Features from "../components/Features"
+import Features from "../components/Funcionalidades/Features"
 import Pricing from "../components/Pricing"
 import Clients from "../components/Clients"
 import Team from "../components/Team"
