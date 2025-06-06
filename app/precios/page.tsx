@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 
 export default function PreciosPage() {
   return (
-    <div className="min-h-screen bg-black text-white pt-20 px-4">
-      <div className="max-w-4xl mx-auto mb-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Planes y Precios</h1>
+    <div className="min-h-screen pt-20 px-4 bg-gray-900 text-white">
+      <div className="max-w-5xl mx-auto mb-1 text-center">
+        <h1 className="text-5xl md:text-5xl font-bold mb-4">Planes y Precios</h1>
         <p className="text-gray-400 text-lg">
           Elige el plan que mejor se adapta a las necesidades de tu empresa. Todos nuestros planes incluyen soporte, actualizaciones y acceso a las funcionalidades clave de ControlDoc.
         </p>
