@@ -40,16 +40,7 @@ export const metadata: Metadata = {
 
 export default function FuncionalidadesPage() {
   return (
-    <div className="min-h-screen bg-black text-white pt-20 px-4">
-      <div className="max-w-4xl mx-auto mb-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Funcionalidades de ControlDoc
-        </h1>
-        <p className="text-gray-400 text-lg">
-          La plataforma que centraliza, automatiza y asegura la gestión documental de tu empresa.
-        </p>
-      </div>
-
+    <div className="min-h-screen bg-background text-foreground pt-20 px-4">
       <Features />
       <FeaturesPro />
     </div>

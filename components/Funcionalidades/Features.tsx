@@ -34,10 +34,10 @@ export default function Features() {
       sectionId="features"
       title="Funcionalidades Clave"
       subtitle="Todo lo que tu empresa necesita para un control documental profesional, rápido y seguro."
-      gradientHeader="bg-gradient-to-r from-cyan-400 to-blue-500"
-      gradientCard="bg-gradient-to-br from-cyan-500 to-blue-600"
-      borderColor="border-gray-800 hover:border-cyan-500"
-      bgSection="bg-gradient-to-b from-neutral-950 to-neutral-900"
+      gradientHeader="bg-gradient-to-r from-primary/70 to-primary"
+      gradientCard="bg-gradient-to-br from-primary to-primary/60"
+      borderColor="border-border hover:border-primary"
+      bgSection="bg-background"
       shadowCard="shadow-lg"
     />
   )

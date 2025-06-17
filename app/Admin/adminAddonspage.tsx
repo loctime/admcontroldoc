@@ -1,19 +1,9 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import {
-  collection,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-} from "firebase/firestore"
-import { db } from "../../lib/firebase/config"
 import { Addon } from "../../hooks/useAddons"
 import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
-import { Label } from "../../components/ui/label"
 
 export default function AdminAddonsPage() {
   const [addons, setAddons] = useState<Addon[]>([])
@@ -76,7 +66,7 @@ export default function AdminAddonsPage() {
       <h1 className="text-3xl font-bold mb-6">Panel de Mejoras (Addons)</h1>
 
       {/* Crear nueva mejora */}
-      <div className="border p-4 rounded-xl mb-8 bg-gray-800">
+      <div className="border-border bg-card border p-4 rounded-xl mb-8">
         <h2 className="text-xl font-semibold mb-4">Agregar Nueva Mejora</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Input
@@ -104,7 +94,7 @@ export default function AdminAddonsPage() {
       {/* Lista de mejoras */}
       <div className="space-y-4">
         {addons.map((addon) => (
-          <div key={addon.id} className="border p-4 rounded-xl bg-gray-900">
+          <div key={addon.id} className="border-border bg-card border p-4 rounded-xl">
             {editingId === addon.id ? (
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <Input
@@ -126,10 +116,10 @@ export default function AdminAddonsPage() {
               <div className="flex flex-col md:flex-row md:items-center justify-between">
                 <div>
                   <h3 className="text-lg font-bold">{addon.name}</h3>
-                  <p className="text-gray-400">{addon.description}</p>
+                  <p className="text-muted-foreground">{addon.description}</p>
                 </div>
                 <div className="flex items-center gap-4 mt-2 md:mt-0">
-                  <span className="text-cyan-400 font-semibold">${addon.price}/mes</span>
+                  <span className="text-primary font-semibold">${addon.price}/mes</span>
                   <Button variant="secondary" onClick={() => setEditingId(addon.id)}>
                     Editar
                   </Button>

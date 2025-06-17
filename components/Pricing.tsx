@@ -44,39 +44,39 @@ export default function Pricing() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <section id="pricing" className="py-10 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
+    <div className="min-h-screen bg-background text-foreground">
+      <section id="pricing" className="py-10 px-4 sm:px-6 lg:px-8 bg-background/80">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
               Planes Personalizados
             </h2>
-            <p className="text-xl text-gray-300">Personaliza tu plan según tus necesidades</p>
+            <p className="text-xl text-muted-foreground">Personaliza tu plan según tus necesidades</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {/* Bloque Fijo */}
             <div className="md:sticky md:top-24 h-fit">
               {/* Plan Básico + Resumen Unificados */}
-              <div className="p-6 rounded-2xl border border-cyan-500/20 bg-gray-900/50">
+              <div className="p-6 rounded-2xl border border-primary/20 bg-card/50">
                 <div className="flex flex-col md:flex-row gap-4">
                   {/* Plan Básico (mitad izquierda) */}
                   <div className="w-full md:w-1/2">
                     <h3 className="text-2xl font-bold text-center mb-4">{basePlan.name}</h3>
-                    <div className="text-center text-4xl font-bold text-cyan-400 mb-1">${basePlan.price}</div>
-                    <div className="text-center text-gray-300 mb-6">por mes</div>
+                    <div className="text-center text-4xl font-bold text-primary mb-1">${basePlan.price}</div>
+                    <div className="text-center text-muted-foreground mb-6">por mes</div>
                     <ul className="space-y-2">
                       {basePlan.features.map((feature, index) => (
                         <li key={index} className="flex items-center">
-                          <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
+                          <Check className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
+                          <span className="text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* Resumen (mitad derecha) */}
-                  <div className="w-full md:w-1/2 rounded-xl border border-cyan-500 bg-gradient-to-b from-cyan-500/10 to-blue-500/10 p-4 h-fit">
+                  <div className="w-full md:w-1/2 rounded-xl border border-primary bg-gradient-to-b from-primary/10 to-primary/5 p-4 h-fit">
                     <h4 className="text-lg font-bold mb-3 text-center">Resumen de tu Plan</h4>
                     <div className="space-y-2 mb-3">
                       <div className="flex justify-between">
@@ -86,22 +86,22 @@ export default function Pricing() {
                       {selectedAddons.map((addonId) => {
                         const addon = addons.find((a) => a.id === addonId)
                         return addon ? (
-                          <div key={addonId} className="flex justify-between text-cyan-300">
+                          <div key={addonId} className="flex justify-between text-primary/70">
                             <span>{addon.name}</span>
                             <span>+${addon.price}</span>
                           </div>
                         ) : null
                       })}
                     </div>
-                    <div className="border-t border-cyan-500/30 pt-3">
+                    <div className="border-t border-primary/30 pt-3">
                       <div className="flex justify-between text-lg font-bold">
                         <span>Total</span>
-                        <span className="text-cyan-400">${calculateTotal()}/mes</span>
+                        <span className="text-primary">${calculateTotal()}/mes</span>
                       </div>
                     </div>
                     <button
                       onClick={handleContactSupport}
-                      className="w-full mt-5 py-3 rounded-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                      className="w-full mt-5 py-3 rounded-lg font-semibold bg-gradient-to-r from-primary to-primary/80 hover:from-primary/80 hover:to-primary transition-all duration-200"
                     >
                       Contactar Soporte para Activar
                     </button>
@@ -121,8 +121,8 @@ export default function Pricing() {
                       key={addon.id}
                       className={`p-6 rounded-xl border transition-all duration-200 cursor-pointer ${
                         isSelected
-                          ? "border-cyan-500 bg-cyan-500/10"
-                          : "border-gray-700 bg-gray-900/30 hover:border-cyan-500/50"
+                          ? "border-primary bg-primary/10"
+                          : "border-border bg-background/80 hover:border-primary/50"
                       }`}
                       onClick={() => toggleAddon(addon.id)}
                     >
@@ -131,19 +131,19 @@ export default function Pricing() {
                           <div className="flex items-center mb-2">
                             <h4 className="text-lg font-semibold">{addon.name}</h4>
                             <div className="ml-auto flex items-center">
-                              <span className="text-xl font-bold text-cyan-400 mr-3">+${addon.price}/mes</span>
+                              <span className="text-xl font-bold text-primary mr-3">+${addon.price}/mes</span>
                               <button
                                 className={`p-1 rounded-full transition-colors ${
                                   isSelected
-                                    ? "bg-cyan-500 text-white"
-                                    : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                                    ? "bg-primary text-foreground"
+                                    : "bg-border text-muted-foreground hover:bg-border/80"
                                 }`}
                               >
                                 {isSelected ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                               </button>
                             </div>
                           </div>
-                          <p className="text-gray-400 text-sm">{addon.description}</p>
+                          <p className="text-muted-foreground text-sm">{addon.description}</p>
                         </div>
                       </div>
                     </div>
@@ -151,8 +151,8 @@ export default function Pricing() {
                 })}
               </div>
 
-              <div className="mt-8 p-4 rounded-lg bg-blue-500/10 border border-blue-500/30">
-                <p className="text-sm text-blue-300 text-center">
+              <div className="mt-8 p-4 rounded-lg bg-primary/10 border border-primary/30">
+                <p className="text-sm text-primary/70 text-center">
                   💡 <strong>Tip:</strong> Selecciona las mejoras que necesites y contacta con nuestro soporte para activar tu plan personalizado
                 </p>
               </div>
