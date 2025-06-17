@@ -9,12 +9,12 @@ export default function Features() {
     {
       icon: FileCheck,
       title: "Imagenes a PDF",
-      description: "ControlDoc convierte tus imagenes en PDF automaticamente.",
+      description: "Convierte tus imagenes en PDF automaticamente.",
     },
     {
       icon: Bell,
       title: "Backups en segundos",
-      description: "ControlDoc hace backups de tus documentos en segundos.",
+      description: "Backups de tus documentos en segundos.",
     },
     {
       icon: ShieldCheck,

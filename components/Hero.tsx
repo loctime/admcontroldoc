@@ -20,10 +20,16 @@ export default function Hero() {
           <p className="font-serif text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">ControlDoc te ayuda a gestionar y auditar todos los documentos con trazabilidad completa y alertas automáticas.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-lg font-semibold hover:from-primary/80 hover:to-primary transition-all duration-200 flex items-center justify-center">
-                Hero CTA
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+            {/* Botón convertido en enlace para abrir WhatsApp con el número solicitado. Mejor UX y cumplimiento de la función de CTA. */}
+<a
+  href="https://wa.me/5493364345088"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group bg-gradient-to-r from-primary to-primary/80 px-8 py-4 rounded-lg font-semibold hover:from-primary/80 hover:to-primary transition-all duration-200 flex items-center justify-center"
+>
+  Contactar
+  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+</a>
             <button className="px-8 py-4 rounded-lg border border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200">
               Ver Demo
             </button>
