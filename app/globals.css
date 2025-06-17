@@ -4,35 +4,68 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;              /* Fondo principal de la app (negro) */
-    --foreground: 0 0% 100%;            /* Texto principal (blanco) */
-    --card: 0 0% 5%;                    /* Fondo de tarjetas y secciones (gris muy oscuro) */
-    --card-foreground: 0 0% 100%;       /* Texto sobre tarjetas (blanco) */
-    --popover: 0 0% 5%;                 /* Fondo de popovers/modales */
-    --popover-foreground: 0 0% 100%;    /* Texto sobre popovers */
-    --primary: 180 100% 50%;            /* Color primario (cyan/azul) */
-    --primary-foreground: 0 0% 0%;      /* Texto sobre color primario (negro) */
-    --secondary: 0 0% 10%;              /* Fondo secundario (gris oscuro) */
-    --secondary-foreground: 0 0% 100%;  /* Texto sobre fondo secundario (blanco) */
-    --muted: 0 0% 10%;                  /* Fondo para elementos menos destacados */
-    --muted-foreground: 0 0% 60%;       /* Texto menos destacado (gris claro) */
-    --accent: 0 0% 10%;                 /* Color de acento (gris oscuro) */
-    --accent-foreground: 0 0% 100%;     /* Texto sobre acento (blanco) */
-    --destructive: 0 84% 60%;           /* Color para acciones destructivas (rojo) */
-    --destructive-foreground: 0 0% 100%;/* Texto sobre acciones destructivas (blanco) */
-    --border: 0 0% 15%;                 /* Color de borde (gris oscuro) */
-    --input: 0 0% 15%;                  /* Fondo de inputs (gris oscuro) */
-    --ring: 180 100% 50%;               /* Color de focus ring (cyan/azul) */
-    --radius: 0.5rem;                   /* Radio de bordes para elementos (8px) */
+    --background: 220 19% 8%;            /* Azul oscuro profundo (#10151A) */
+    --foreground: 0 0% 100%;             /* Blanco */
+    --card: 220 19% 12%;                 /* #151B21 */
+    --card-foreground: 0 0% 100%;
+    --popover: 220 19% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 220 56% 53%;              /* #4472CA */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 10% 25%;            /* #313843 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 9% 20%;                 /* #292F36 */
+    --muted-foreground: 0 0% 70%;
+    --accent: 220 56% 53%;               /* igual que primario */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;            /* Rojo profesional (#D33C3C) */
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 10% 20%;               /* #2A313A */
+    --input: 220 10% 20%;
+    --ring: 220 56% 53%;
+    --radius: 0.5rem;
+  }
+
+  [data-theme="light"] {
+    --background: 0 0% 98%;              /* #FAFAFA */
+    --foreground: 220 19% 10%;           /* Texto gris oscuro azulado (#1A1D21) */
+    --card: 0 0% 100%;                   /* Blanco */
+    --card-foreground: 220 19% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 19% 10%;
+    --primary: 220 56% 53%;              /* #4472CA */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 10% 90%;            /* #E9ECF1 */
+    --secondary-foreground: 220 19% 10%; /* Texto azul/gris oscuro */
+    --muted: 220 10% 92%;                /* #F1F3F7 */
+    --muted-foreground: 220 9% 50%;      /* Gris medio */
+    --accent: 220 56% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 50%;            /* #D33C3C */
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 85%;                  /* #D9D9D9 */
+    --input: 0 0% 90%;                   /* #E6E6E6 */
+    --ring: 220 56% 53%;
+    --radius: 0.5rem;
   }
 }
+
 
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    /* Quitamos @apply bg-background text-foreground para evitar conflicto, se usará .bg-app */
+  }
+  .bg-app {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+  .bg-app-glass {
+    background-color: hsl(var(--background) / 0.9);
+    color: hsl(var(--foreground));
+    backdrop-filter: blur(6px);
   }
 }
 

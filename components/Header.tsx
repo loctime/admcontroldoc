@@ -2,12 +2,13 @@
 
 import { useState } from "react"
 import { Menu, X, Globe } from "lucide-react"
+import ThemeSwitcher from "./ThemeSwitcher"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-cyan-500/20">
+    <header className="fixed w-full top-0 z-50 bg-app-glass border-b border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -62,6 +63,9 @@ export default function Header() {
             </nav>
           </div>
         )}
+        <div className="absolute right-4 top-3 md:static md:ml-4">
+          <ThemeSwitcher />
+        </div>
       </div>
     </header>
   )
