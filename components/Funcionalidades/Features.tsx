@@ -1,30 +1,30 @@
 //components/Funcionalidades/Features.tsx
 "use client"
 
-import { FileCheck, Bell, ShieldCheck, PieChart } from "lucide-react"
+import { FileCheck, Bell, ShieldCheck, Folder } from "lucide-react"
 import FeaturesList from "./FeaturesList"
 
 export default function Features() {
   const features = [
     {
       icon: FileCheck,
-      title: "Control Documental Total",
-      description: "Gestión centralizada de documentos requeridos para empresas, personal, vehículos y más.",
+      title: "Imagenes a PDF",
+      description: "ControlDoc convierte tus imagenes en PDF automaticamente.",
     },
     {
       icon: Bell,
-      title: "Alertas Automáticas",
-      description: "Notificaciones por vencimientos, faltantes o revisión vía email o WhatsApp.",
+      title: "Backups en segundos",
+      description: "ControlDoc hace backups de tus documentos en segundos.",
     },
     {
       icon: ShieldCheck,
-      title: "Cumplimiento Normativo",
-      description: "Adaptado a Ley 19.587, Decretos 911/96 y estándares legales vigentes.",
+      title: "Aprobaciones con trazabilidad",
+      description: "Control total sobre quién sube, aprueba y visualiza cada documento.",
     },
     {
-      icon: PieChart,
-      title: "Panel de Estadísticas",
-      description: "Visualización clara del estado documental por sucursal, entidad y categoría.",
+      icon: Folder,
+      title: "Almacén de documentos",
+      description: "Almacena documentos en carpetas privadas o publicas.",
     },
   ]
 
@@ -32,8 +32,8 @@ export default function Features() {
     <FeaturesList
       features={features}
       sectionId="features"
-      title="Funcionalidades Clave"
-      subtitle="Todo lo que tu empresa necesita para un control documental profesional, rápido y seguro."
+      title="Gestion automática de documentos"
+      subtitle="Como puede ControlDoc ayudarte a gestionar tus documentos"
       gradientHeader="bg-gradient-to-r from-primary/70 to-primary"
       gradientCard="bg-gradient-to-br from-primary to-primary/60"
       borderColor="border-border hover:border-primary"

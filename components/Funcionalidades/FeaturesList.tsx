@@ -37,12 +37,12 @@ const FeaturesList: React.FC<FeaturesListProps> = ({
   shadowCard = "shadow-lg",
 }) => {
   return (
-    <section id={sectionId} className={`py-10 px-4 sm:px-8 ${bgSection}`}>
+    <section id={sectionId} className={`py-10 px-4 sm:px-8 bg-app`}>
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${gradientHeader} bg-clip-text text-transparent`}>
+        <h2 className={`text-4xl md:text-5xl font-bold mb-6 gradient-text`}>
           {title}
         </h2>
-        <p className="text-lg text-gray-400 mb-16 max-w-2xl mx-auto">
+        <p className="text-lg text-muted-foreground mb-16 max-w-2xl mx-auto">
           {subtitle}
         </p>
 
@@ -50,13 +50,13 @@ const FeaturesList: React.FC<FeaturesListProps> = ({
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`group p-6 rounded-xl border ${borderColor} bg-opacity-80 hover:border-cyan-500 transition-all duration-300 hover:scale-[1.03] ${shadowCard}`}
+              className={`group p-6 rounded-xl border border-border bg-app-glass hover:border-primary transition-all duration-300 hover:scale-[1.03] glass`}
             >
-              <div className={`w-12 h-12 ${gradientCard} rounded-lg flex items-center justify-center mb-4 shadow-md group-hover:rotate-3 transition-transform duration-300`}>
+              <div className={`w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4 shadow-md group-hover:rotate-3 transition-transform duration-300`}>
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-300 text-sm">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm">{feature.description}</p>
             </div>
           ))}
         </div>

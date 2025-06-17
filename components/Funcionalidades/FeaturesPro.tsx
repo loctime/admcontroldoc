@@ -1,7 +1,7 @@
 //components/Funcionalidades/FeaturesPro.tsx
 "use client"
 
-import { UploadCloud, History, CheckCircle2, UserCog } from "lucide-react"
+import { UploadCloud, History, CheckCircle2, UserCog, EyeIcon } from "lucide-react"
 import FeaturesList from "./FeaturesList"
 
 export default function FeaturesPro() {
@@ -17,9 +17,9 @@ export default function FeaturesPro() {
       description: "Registro automático de cada cambio con trazabilidad completa y fechas de revisión.",
     },
     {
-      icon: CheckCircle2,
-      title: "Revisión y Firma Interna",
-      description: "Proceso de aprobación manual con observaciones, firma interna y fecha de validación.",
+      icon: EyeIcon,
+      title: "Lectura automática de documentos",
+      description: "Lectura automática de documentos con para extraer información requerida.",
     },
     {
       icon: UserCog,
@@ -32,12 +32,12 @@ export default function FeaturesPro() {
     <FeaturesList
       features={proFeatures}
       sectionId="features-pro"
-      title="Funcionalidades Pro"
-      subtitle="Lleva tu gestión documental al siguiente nivel con herramientas exclusivas del plan avanzado."
-      gradientHeader="bg-gradient-to-r from-purple-400 to-indigo-500"
-      gradientCard="bg-gradient-to-br from-purple-500 to-indigo-600"
-      borderColor="border-indigo-700 hover:border-purple-500"
-      bgSection="bg-gradient-to-b from-neutral-900 to-black"
+      title="Facilidad de uso"
+      subtitle="ControlDoc trabaja para ti."
+      gradientHeader=""
+      gradientCard=""
+      borderColor=""
+      bgSection=""
       shadowCard="shadow-xl"
     />
   )
