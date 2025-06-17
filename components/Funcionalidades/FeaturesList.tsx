@@ -39,7 +39,8 @@ const FeaturesList: React.FC<FeaturesListProps> = ({
   return (
     <section id={sectionId} className={`py-10 px-4 sm:px-8 bg-app`}>
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className={`text-4xl md:text-5xl font-bold mb-6 gradient-text`}>
+        {/* El gradiente del título ahora es configurable vía la prop gradientHeader para mayor flexibilidad de branding. */}
+        <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${gradientHeader} bg-clip-text text-transparent`}>
           {title}
         </h2>
         <p className="text-lg text-muted-foreground mb-16 max-w-2xl mx-auto">

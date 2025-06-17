@@ -34,7 +34,8 @@ export default function FeaturesPro() {
       sectionId="features-pro"
       title="Facilidad de uso"
       subtitle="ControlDoc trabaja para ti."
-      gradientHeader=""
+      /* Se aplica el gradiente azul corporativo para que el título sea visible y consistente */
+      gradientHeader="bg-gradient-to-r from-primary/70 to-primary"
       gradientCard=""
       borderColor=""
       bgSection=""

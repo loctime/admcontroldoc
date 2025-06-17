@@ -35,7 +35,7 @@ export default function Features() {
       title="Gestion automática de documentos"
       subtitle="Como puede ControlDoc ayudarte a gestionar tus documentos"
       gradientHeader="bg-gradient-to-r from-primary/70 to-primary"
-      gradientCard="bg-gradient-to-br from-primary to-primary/60"
+      gradientCard="bg-gradient-to-br from-primary to-primary/60 data-[theme=light]:bg-glass data-[theme=light]:bg-none"
       borderColor="border-border hover:border-primary"
       bgSection="bg-background"
       shadowCard="shadow-lg"

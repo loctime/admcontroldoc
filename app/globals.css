@@ -12,6 +12,7 @@
     --accent: 0 70% 50%;              /* Rojo profesional (#D33C3C) */
     --success: 131.74 29.11% 30.98%;  /* Verde profesional oscuro (#225B3C) */
     --border: 220 14% 25%;            /* #2A313A (líneas, bordes) */
+    --glass: 206.67 100% 40.59%;
   }
 
   [data-theme="light"] {
@@ -22,6 +23,7 @@
     --accent: 0 70% 50%;              /* #D33C3C */
     --success: 97.6 32.47% 45.29%;    /* Verde profesional claro (#A7D88C) */
     --border: 226.76 64.15% 20.78%;            /* #DDE3EA */
+    --glass: 206.67 100% 40.59%;            /* #DDE3EA */
   }
 }
 
