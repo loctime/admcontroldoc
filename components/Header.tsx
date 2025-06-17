@@ -1,12 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { useLanguage } from "../context/LanguageContext"
 import { Menu, X, Globe } from "lucide-react"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const { language, setLanguage, t } = useLanguage()
 
   return (
     <header className="fixed w-full top-0 z-50 bg-black/90 backdrop-blur-sm border-b border-cyan-500/20">
@@ -25,7 +23,7 @@ export default function Header() {
                 href={`#${item}`}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
               >
-                {t(`nav_${item}`)}
+                {item}
               </a>
             ))}
           </nav>
@@ -58,7 +56,7 @@ export default function Header() {
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  {t(`nav_${item}`)}
+                  {item}
                 </a>
               ))}
             </nav>

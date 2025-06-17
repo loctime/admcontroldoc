@@ -3,11 +3,9 @@
 import type React from "react"
 
 import { useState } from "react"
-import { useLanguage } from "../context/LanguageContext"
 import { Send, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Contact() {
-  const { t } = useLanguage()
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -20,9 +18,7 @@ export default function Contact() {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {t("contact_title")}
-          </h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Contacto</h2>
           <p className="text-xl text-gray-300">Estamos aquí para ayudarte</p>
         </div>
 
@@ -30,9 +26,12 @@ export default function Contact() {
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-200 mb-1">
+                  Nombre
+                </label>
                 <input
                   type="text"
-                  placeholder="Nombre"
+                  id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
@@ -40,9 +39,12 @@ export default function Contact() {
                 />
               </div>
               <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-1">
+                  Email
+                </label>
                 <input
                   type="email"
-                  placeholder="Email"
+                  id="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
@@ -50,8 +52,11 @@ export default function Contact() {
                 />
               </div>
               <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-200 mb-1">
+                  Mensaje
+                </label>
                 <textarea
-                  placeholder="Mensaje"
+                  id="message"
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}

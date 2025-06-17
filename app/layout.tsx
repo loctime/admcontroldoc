@@ -2,8 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { LanguageProvider } from "../context/LanguageContext"
-import { AuthProvider } from "../features/auth/context/AuthContext"
+
 import Header from "../components/layout/Header"
 import Footer from "../components/layout/Footer"
 
@@ -59,15 +58,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
+    <html>
       <body className={`${inter.className} min-h-screen bg-black text-white`}>
-        <LanguageProvider>
-          <AuthProvider>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </AuthProvider>
-        </LanguageProvider>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

@@ -1,9 +1,6 @@
 "use client"
 
-import { useLanguage } from "../context/LanguageContext"
-
 export default function Team() {
-  const { t } = useLanguage()
 
   const team = [
     {
@@ -24,7 +21,7 @@ export default function Team() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {t("team_title")}
+            Nuestro equipo
           </h2>
           <p className="text-xl text-gray-300">Conoce a los expertos detrás de la innovación</p>
         </div>
@@ -41,6 +38,7 @@ export default function Team() {
               </div>
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
               <p className="text-cyan-400">{member.role}</p>
+              <p className="text-gray-500 text-sm">Breve bio del miembro del equipo.</p>
             </div>
           ))}
         </div>

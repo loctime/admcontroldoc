@@ -1,11 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { useLanguage } from "../../context/LanguageContext"
 import { FileText, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
-  const { t } = useLanguage()
 
   const navigation = {
     product: [
@@ -47,7 +45,7 @@ export default function Footer() {
                 ControlDoc
               </span>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">{t("footer_description")}</p>
+            <p className="text-gray-300 mb-6 max-w-md">Plataforma integral para la gestión inteligente de documentos empresariales</p>
             <div className="space-y-2">
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-2" />
@@ -123,7 +121,7 @@ export default function Footer() {
 
         <div className="border-t border-cyan-500/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">&copy; 2024 ControlDoc. {t("footer_rights")}.</p>
+            <p className="text-gray-300 text-sm">&copy; 2024 ControlDoc. Todos los derechos reservados.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <span className="sr-only">LinkedIn</span>

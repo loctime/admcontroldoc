@@ -1,10 +1,8 @@
 "use client"
 
-import { useLanguage } from "../context/LanguageContext"
 import { ArrowRight, Zap } from "lucide-react"
 
 export default function Hero() {
-  const { t } = useLanguage()
 
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -16,14 +14,14 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-400 bg-clip-text text-transparent">
-            {t("hero_title")}
+            Hero Title
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">{t("hero_subtitle")}</p>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">Hero Subtitle</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="group bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center">
-              {t("hero_cta")}
+                Hero CTA
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="px-8 py-4 rounded-lg border border-cyan-500/30 hover:border-cyan-500 hover:bg-cyan-500/10 transition-all duration-200">
