@@ -9,8 +9,6 @@ export default function HomePage() {
     <div className="min-h-screen bg-app">
       <Hero />
       <Features />
-      <Clients />
-      <Team />
       <Contact />
     </div>
   )
