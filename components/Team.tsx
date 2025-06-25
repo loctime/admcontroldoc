@@ -1,5 +1,7 @@
 "use client"
 
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+
 export default function Team() {
 
   const team = [

@@ -2,6 +2,7 @@ import Hero from "../components/Hero"
 import Features from "../components/Funcionalidades/Features"
 import Clients from "../components/Clients"
 import Contact from "../components/Contact"
+import Team from "@/components/Team"
 
 export default function HomePage() {
   return (
