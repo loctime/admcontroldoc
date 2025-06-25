@@ -2,8 +2,8 @@
 
 import { ArrowRight, Zap } from "lucide-react"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
+import Autoplay from "embla-carousel-autoplay"
 
 export default function Hero() {
   const images = [
@@ -16,8 +16,8 @@ export default function Hero() {
 
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
+      <div className="max-w-7xl mx-auto text-center">
+        <div className="mb-8">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Zap className="w-4 h-4 text-primary mr-2" />
             <span className="text-primary text-sm">Tecnología Avanzada</span>
@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Sección de contenido dividida */}
+        {/* Layout con carrusel animado en loop */}
         <div className="relative mt-16">
           <div className="absolute inset-0 pointer-events-none z-0 bg-gradient-to-r from-primary/30 to-primary/20 dark:from-primary/30 dark:to-primary/10 dark:blur-3xl blur-xl" />
 
@@ -67,12 +67,11 @@ export default function Hero() {
               </ul>
             </div>
 
-            {/* Carrusel animado a la derecha */}
+            {/* Carrusel embla con loop y autoplay */}
             <div className="w-full">
               <Carousel
-                plugins={[
-                  Autoplay({ delay: 3000, stopOnInteraction: false }),
-                ]}
+                opts={{ loop: true }}
+                plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
                 className="w-full max-w-md mx-auto"
               >
                 <CarouselContent>
