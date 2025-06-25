@@ -16,7 +16,6 @@ export default function AccessibleHeader() {
     { name: t("nav_features"), href: "/funcionalidades" },
     { name: t("nav_pricing"), href: "/precios" },
     { name: t("nav_clients"), href: "/clientes" },
-    { name: t("nav_team"), href: "/equipo" },
     { name: t("nav_contact"), href: "/contacto" },
   ]
 

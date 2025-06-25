@@ -1,7 +1,6 @@
 import Hero from "../components/Hero"
 import Features from "../components/Funcionalidades/Features"
 import Clients from "../components/Clients"
-import Team from "../components/Team"
 import Contact from "../components/Contact"
 
 export default function HomePage() {
@@ -10,7 +9,6 @@ export default function HomePage() {
       <Hero />
       <Features />
       <Clients />
-      <Team />
       <Contact />
     </div>
   )

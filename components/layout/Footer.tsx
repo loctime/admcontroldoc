@@ -10,11 +10,9 @@ export default function Footer() {
       { name: "Unir PDF automáticamente", href: "/unir-pdf" }, // SEO first
       { name: "Funcionalidades", href: "/funcionalidades" },
       { name: "Precios", href: "/precios" },
-      { name: "Clientes", href: "/clientes" },
       { name: "Demo", href: "/contacto" },
     ],
     company: [
-      { name: "Equipo", href: "/equipo" },
       { name: "Contacto", href: "/contacto" },
       { name: "Blog", href: "#" },
       { name: "Carreras", href: "#" },
