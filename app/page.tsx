@@ -9,6 +9,7 @@ export default function HomePage() {
       <Hero />
       <Features />
       <Clients />
+      <Team />
       <Contact />
     </div>
   )
