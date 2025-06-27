@@ -1,69 +1,91 @@
-// FeaturesList.tsx
-// Componente genérico para mostrar listas de features con íconos y estilos personalizados
+import FeatureCard from "./FeatureCard";
+import { useRef, useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import React from "react"
-
-export interface FeatureItem {
-  icon: React.ElementType
-  title: string
-  description: string
+interface FeatureItem {
+  image?: string;
+  icon?: React.ElementType;
+  title: string;
+  description: string;
 }
 
 interface FeaturesListProps {
-  features: FeatureItem[]
-  sectionId: string
-  title: string
-  subtitle: string
-  gradientHeader: string
-  gradientCard: string
-  borderColor: string
-  bgSection: string
-  shadowCard?: string
+  features: FeatureItem[];
 }
 
-/**
- * Componente reutilizable para mostrar una lista de features (características)
- * con estilos y textos personalizables.
- */
-const FeaturesList: React.FC<FeaturesListProps> = ({
-  features,
-  sectionId,
-  title,
-  subtitle,
-  gradientHeader,
-  gradientCard,
-  borderColor,
-  bgSection,
-  shadowCard = "shadow-lg",
-}) => {
+const SCROLL_AMOUNT = 320; // px, igual al ancho de la card aprox
+
+const FeaturesList: React.FC<FeaturesListProps> = ({ features }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [showButtons, setShowButtons] = useState(false);
+
+  // Detecta si hay overflow horizontal
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const checkOverflow = () => {
+      setShowButtons(el.scrollWidth > el.clientWidth + 8); // margen de error
+    };
+    checkOverflow();
+    window.addEventListener("resize", checkOverflow);
+    return () => window.removeEventListener("resize", checkOverflow);
+  }, [features.length]);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const { scrollLeft } = scrollRef.current;
+    scrollRef.current.scrollTo({
+      left: dir === "left" ? scrollLeft - SCROLL_AMOUNT : scrollLeft + SCROLL_AMOUNT,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <section id={sectionId} className={`py-10 px-4 sm:px-8 bg-app`}>
-      <div className="max-w-7xl mx-auto text-center">
-        {/* El gradiente del título ahora es configurable vía la prop gradientHeader para mayor flexibilidad de branding. */}
-        <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${gradientHeader} bg-clip-text text-transparent`}>
-          {title}
-        </h2>
-        <p className="text-lg text-muted-foreground mb-16 max-w-2xl mx-auto">
-          {subtitle}
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className={`group p-6 rounded-xl border border-border bg-app-glass hover:border-primary transition-all duration-300 hover:scale-[1.03] glass`}
-            >
-              <div className={`w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4 shadow-md group-hover:rotate-3 transition-transform duration-300`}>
-                <feature.icon className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
+    <div className="relative w-full">
+      {/* Botón izquierdo */}
+      {showButtons && (
+        <button
+          aria-label="Ver anterior"
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-zinc-900/80 rounded-full shadow p-2 hover:bg-primary/80 transition"
+          tabIndex={0}
+        >
+          <ChevronLeft className="w-6 h-6 text-primary" />
+        </button>
+      )}
+      {/* Botón derecho */}
+      {showButtons && (
+        <button
+          aria-label="Ver siguiente"
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-zinc-900/80 rounded-full shadow p-2 hover:bg-primary/80 transition"
+          tabIndex={0}
+        >
+          <ChevronRight className="w-6 h-6 text-primary" />
+        </button>
+      )}
+      {/* Contenedor de cards */}
+      <div
+        ref={scrollRef}
+        className="flex flex-nowrap gap-6 overflow-x-auto pb-4 snap-x snap-mandatory"
+        style={{ WebkitOverflowScrolling: 'touch' }}
+        tabIndex={0}
+        aria-label="Funcionalidades de ControlDoc, scroll horizontal"
+      >
+        {features.map((f, idx) =>
+          f.image ? (
+            <FeatureCard key={f.title + idx} image={f.image} title={f.title} description={f.description} />
+          ) : f.icon ? (
+            <div key={f.title + idx} className="min-w-[18rem] w-72 m-4 bg-white dark:bg-zinc-900 rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-4 transition hover:scale-105 snap-center">
+              <f.icon className="w-12 h-12 text-primary mb-2" />
+              <h3 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">{f.title}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300">{f.description}</p>
             </div>
-          ))}
-        </div>
+          ) : null
+        )}
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
 export default FeaturesList;

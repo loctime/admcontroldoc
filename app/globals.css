@@ -27,8 +27,14 @@
   }
 }
 
+/* Configuración global para vista más compacta */
+html {
+  font-size: 14px; /* Reduce el tamaño base de fuente (default es 16px) */
+  line-height: 1.4; /* Reduce el espaciado entre líneas */
+  scroll-behavior: smooth;
+}
 
-
+/* Ajustes adicionales para elementos específicos */
 @layer base {
   * {
     @apply border-border;
@@ -45,11 +51,22 @@
     color: hsl(var(--foreground));
     backdrop-filter: blur(6px);
   }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
+  
+  /* Ajustes para headings más compactos */
+  h1 {
+    line-height: 1.2;
+  }
+  h2 {
+    line-height: 1.3;
+  }
+  h3 {
+    line-height: 1.3;
+  }
+  
+  /* Ajustes para párrafos más compactos */
+  p {
+    line-height: 1.5;
+  }
 }
 
 /* Custom scrollbar */

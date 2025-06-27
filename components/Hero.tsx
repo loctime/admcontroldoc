@@ -16,7 +16,7 @@ export default function Hero() {
 
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="w-full max-w-6xl mx-auto">
         <div className="mb-8">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Zap className="w-4 h-4 text-primary mr-2" />
@@ -92,6 +92,47 @@ export default function Hero() {
               </Carousel>
             </div>
           </div>
+        </div>
+
+        {/* Video tutorial de registro */}
+        <div className="mt-16 flex flex-col items-center">
+          <h3 className="text-lg font-semibold mb-4 text-center">Cómo registrarte en ControlDoc</h3>
+          <div className="relative pb-[56.25%] w-full max-w-2xl rounded-xl overflow-hidden">
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-xl"
+              src="https://embed.app.guidde.com/playbooks/kSoCKcHx6s5XV6E1LXhxYN"
+              title="Registro en ControlDoc"
+              frameBorder={0}
+              referrerPolicy="unsafe-url"
+              allowFullScreen
+              allow="clipboard-write"
+              sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-forms allow-same-origin allow-presentation"
+            />
+          </div>
+          <details className="mt-4 w-full max-w-2xl bg-white/80 dark:bg-zinc-900/80 rounded p-4 text-left text-sm cursor-pointer">
+            <summary className="font-semibold text-primary mb-2 cursor-pointer">Ver transcripción del video</summary>
+            <div className="mt-2 text-gray-700 dark:text-gray-200 whitespace-pre-line">
+              00:02: ¿Recibiste una invitación para cargar documentación? Ya seas parte de una empresa o estés trabajando como contratista, este es el primer paso para empezar.
+
+00:06: Haz clic en "No tenés cuenta" para registrarte y comenzar a subir los documentos que tu empresa necesita.
+
+00:14: ControlDoc te ayuda a tener todo organizado en un solo lugar y con seguimiento en tiempo real.
+
+00:24: Ingresa un correo válido. Es importante que sea real porque ahí vas a recibir novedades importantes y es la única forma de recuperar tu cuenta si perdés la contraseña.
+
+00:37: Ingresa tu CUIT.
+
+00:40: Ingresa el nombre de tu empresa o, si sos un usuario, tu nombre.
+
+00:45: Ingresa tu número de teléfono de contacto.
+
+00:48: Tu dirección.
+
+00:51: Una contraseña segura. No la compartas con nadie.
+
+00:55: Haz clic en "Registrar ahora". Espera que un administrador apruebe tu solicitud y pronto vas a poder subir tus documentos.
+            </div>
+          </details>
         </div>
       </div>
     </section>

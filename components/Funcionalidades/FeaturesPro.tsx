@@ -7,21 +7,25 @@ import FeaturesList from "./FeaturesList"
 export default function FeaturesPro() {
   const proFeatures = [
     {
+      image: "/canva/cargaGuiada.png",
       icon: UploadCloud,
       title: "Carga Guiada de Documentos",
       description: "Carga paso a paso con validaciones y archivos de ejemplo para cada requerimiento.",
     },
     {
+      image: "/canva/historialVersiones.png",
       icon: History,
       title: "Historial de Versiones",
       description: "Registro automático de cada cambio con trazabilidad completa y fechas de revisión.",
     },
     {
+      image: "/canva/lecturaAutomatica.png",
       icon: EyeIcon,
       title: "Lectura automática de documentos",
-      description: "Lectura automática de documentos con para extraer información requerida.",
+      description: "Extrae automáticamente información clave de los documentos subidos.",
     },
     {
+      image: "/canva/gestionRoles.png",
       icon: UserCog,
       title: "Gestión Avanzada de Roles",
       description: "Permisos personalizados para administradores, revisores y usuarios externos.",

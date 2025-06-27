@@ -18,10 +18,10 @@ export default function Footer() {
       { name: "Carreras", href: "#" },
     ],
     legal: [
-      { name: "Privacidad", href: "#" },
-      { name: "Términos", href: "#" },
-      { name: "Cookies", href: "#" },
-      { name: "Legal", href: "#" },
+      { name: "Privacidad", href: "/legal" },
+      { name: "Términos", href: "/terminos" },
+      { name: "Cookies", href: "/cookies" }, // Asegúrate de crear esta página si es necesario
+      { name: "Legal", href: "/legal" },
     ],
     support: [
       { name: "Centro de Ayuda", href: "#" },

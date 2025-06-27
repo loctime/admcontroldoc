@@ -1,17 +1,9 @@
-import Hero from "../components/Hero"
-import Features from "../components/Funcionalidades/Features"
-import Clients from "../components/Clients"
-import Contact from "../components/Contact"
-import Team from "@/components/Team"
+import Hero from "@/components/Hero"
 
-export default function HomePage() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-app">
+    <main>
       <Hero />
-      <Features />
-      <Clients />
-      <Team />
-      <Contact />
-    </div>
+    </main>
   )
 }
