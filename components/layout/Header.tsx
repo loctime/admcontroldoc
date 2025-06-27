@@ -46,20 +46,21 @@ export default function Header() {
             ))}
           </div>
 
-
+          {/* Mobile menu button and Theme Switcher - Right side */}
+          <div className="flex items-center space-x-2">
             
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-muted-foreground hover:text-primary">
+            {/* Theme Switcher */}
+            <ThemeSwitcher />
+            {/* Mobile menu button */}
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className="md:hidden text-muted-foreground hover:text-primary"
+            >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
-
-          {/* Theme Switcher */}
-          <div className="ml-4">
-            <ThemeSwitcher />
-          </div>
+          
         </div>
 
         {/* Mobile Navigation */}

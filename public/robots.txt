@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Host
+Host: https://controldoc.app
+
+# Sitemaps
+Sitemap: https://controldoc.app/sitemap.xml

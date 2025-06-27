@@ -5,6 +5,7 @@ import "./globals.css"
 
 import Header from "../components/layout/Header"
 import Footer from "../components/layout/Footer"
+import AppThemeProvider from "../components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -60,9 +61,11 @@ export default function RootLayout({
   return (
     <html>
       <body className={`${inter.className} min-h-screen bg-app`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <AppThemeProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </AppThemeProvider>
       </body>
     </html>
   )

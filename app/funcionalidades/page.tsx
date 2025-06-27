@@ -6,16 +6,28 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Funcionalidades - ControlDoc",
   description:
-    "Descubre todas las funcionalidades que ofrece ControlDoc para empresas: control documental, alertas automáticas, cumplimiento normativo, estadísticas y más.",
-  keywords: [
-    "control documental",
-    "vencimientos",
-    "documentación empresarial",
-    "alertas de documentos",
-    "sistema de cumplimiento normativo",
-    "documentos laborales",
-    "plataforma SaaS",
-  ],
+    "Conoce todas las herramientas de ControlDoc: vencimientos, alertas automáticas, cumplimiento legal y más.",
+    keywords: [
+      "control documental para empresas",
+      "gestión de vencimientos",
+      "documentación laboral",
+      "alertas automáticas de documentos",
+      "cumplimiento normativo empresarial",
+      "plataforma de gestión documental",
+      "sistema de trazabilidad documental",
+      "digitalización de documentos",
+      "software de cumplimiento legal",
+      "gestión de documentos online",
+      "documentación de empleados",
+      "archivado digital seguro",
+      "plataforma SaaS para empresas",
+      "documentación obligatoria Argentina",
+      "gestión ISO 9001 documental"
+    ],
+    robots: {
+      index: true,
+      follow: true,
+    },
   openGraph: {
     title: "Funcionalidades de ControlDoc",
     description: "Explora cómo ControlDoc revoluciona la gestión documental empresarial.",

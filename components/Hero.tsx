@@ -1,29 +1,22 @@
 "use client"
 
-import { ArrowRight, Zap } from "lucide-react"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { ArrowRight, CheckCircle2, Zap, CheckCircle } from "lucide-react"
 import Image from "next/image"
-import Autoplay from "embla-carousel-autoplay"
+import InfraestructuraCarousel from "./InfraestructuraCarousel"
 
 export default function Hero() {
-  const images = [
-    "/documentosNube.jpeg",
-    "/seguridadControldoc.jpeg",
-    "/seguimientoDocumentos.jpeg",
-    "/flujoAprobacion.jpeg",
-    "/organizaPrueba.jpeg",
-  ]
-
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="pt-20 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl mx-auto">
         <div className="mb-8">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-            <Zap className="w-4 h-4 text-primary mr-2" />
-            <span className="text-primary text-sm">Tecnología Avanzada</span>
+          <div className="flex justify-center mb-4">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Zap className="w-4 h-4 text-primary mr-2" />
+              <span className="text-primary text-sm">Tecnología Avanzada</span>
+            </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary dark:bg-gradient-to-r dark:from-primary dark:via-white/70 dark:to-[hsl(var(--success))] dark:bg-clip-text dark:text-transparent dark:text-shadow-white">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary text-center">
             Control Documental Total
           </h1>
 
@@ -55,41 +48,62 @@ export default function Hero() {
             {/* Texto a la izquierda */}
             <div className="text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Automatizá tu gestión documental
+                ControlDoc: Gestión documental automática y sin errores
               </h2>
-              <p className="text-muted-foreground text-lg mb-4">
-                Con ControlDoc no hace falta perseguir documentos. Nuestro sistema envía recordatorios automáticos, permite carga guiada y mantiene tu información siempre actualizada.
+              <p className="text-muted-foreground text-lg mb-6">
+                Olvidate de los vencimientos, la carga manual y los documentos perdidos.
+                Con ControlDoc, automatizás alertas, guiás a tu equipo y mantenés todo actualizado al instante.
               </p>
-              <ul className="list-disc list-inside text-muted-foreground">
-                <li>Recordatorios automáticos de vencimiento</li>
-                <li>Carga guiada y cumplimiento obligatorio</li>
-                <li>Actualización en tiempo real</li>
-              </ul>
+              
+              <div className="flex flex-wrap gap-6 mb-6 justify-start md:justify-center">
+                <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+
+                  <span className="text-primary font-medium">Alertas</span>
+                </div>
+                <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+
+                  <span className="text-primary font-medium">Biblioteca</span>
+                </div>
+                <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                  <span className="text-primary font-medium">Carpetas</span>
+                </div>
+                <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-primary mr-2" />
+                  <span className="text-primary font-medium">Registros</span>
+                </div>
+              </div>
+              
+              <div className="space-y-3">
+                <p className="flex items-center gap-2 text-primary font-semibold">
+                <CheckCircle2 className="w-4 h-4 text-primary mr-2" />
+
+                  Más control. Menos errores.
+                </p>
+                <p className="flex items-center gap-2 text-primary font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-primary mr-2" />
+                  Probalo ahora y simplificá tu gestión.
+                </p>
+              </div>
             </div>
 
-            {/* Carrusel embla con loop y autoplay */}
-            <div className="w-full">
-              <Carousel
-                opts={{ loop: true }}
-                plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]}
-                className="w-full max-w-md mx-auto"
-              >
-                <CarouselContent>
-                  {images.map((src, index) => (
-                    <CarouselItem key={index}>
-                      <div className="overflow-hidden rounded-xl aspect-[4/3] relative">
-                        <Image
-                          src={src}
-                          alt={`Slide ${index + 1}`}
-                          fill
-                          className="object-contain"
-                          sizes="(max-width: 768px) 100vw, 400px"
-                        />
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
+            {/* Imagen + carrusel alineados */}
+            <div className="w-full flex flex-col items-center gap-4">
+              <div className="overflow-hidden rounded-xl relative w-full max-w-sm">
+                <Image
+                  src="/images/negrocontrol.png"
+                  alt="ControlDoc Seguridad"
+                  width={500}
+                  height={300}
+                  className="object-contain w-full h-auto"
+                />
+              </div>
+
+              <div className="w-full">
+                <InfraestructuraCarousel />
+              </div>
             </div>
           </div>
         </div>

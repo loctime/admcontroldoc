@@ -1,31 +1,49 @@
-import { useEffect, useState } from "react";
+import Switch from '@mui/material/Switch'
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 export default function ThemeSwitcher() {
-  // Detectar preferencia inicial del usuario
-  const getInitialTheme = () => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("theme");
-      if (saved === "light" || saved === "dark") return saved;
-      if (window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
-    }
-    return "dark";
-  };
-
-  const [theme, setTheme] = useState<"light" | "dark">(() => getInitialTheme());
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const [checked, setChecked] = useState(false)
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+    setMounted(true)
+    setChecked(theme === 'dark')
+  }, [theme])
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTheme(event.target.checked ? 'dark' : 'light')
+  }
+
+  // Evitar renderizado durante SSR para prevenir hidratación
+  if (!mounted) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+        <span className="text-xs">☀️</span>
+        <Switch
+          checked={false}
+          disabled
+          inputProps={{
+            'aria-label': 'Cargando tema'
+          }}
+          color="primary"
+        />
+      </div>
+    )
+  }
 
   return (
-    <button
-      className="px-3 py-1 rounded bg-cyan-600 text-white text-xs font-medium hover:bg-cyan-700 transition"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      aria-label={theme === "dark" ? "Activar modo claro" : "Activar modo oscuro"}
-      style={{ position: 'relative', zIndex: 100 }}
-    >
-      {theme === "dark" ? "☀️ Modo claro" : "🌙 Modo oscuro"}
-    </button>
-  );
+    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+      <span className="text-xs">{checked ? '🌙' : '☀️'}</span>
+      <Switch
+        checked={checked}
+        onChange={handleChange}
+        inputProps={{
+          'aria-label': checked ? 'Activar modo claro' : 'Activar modo oscuro'
+        }}
+        color="primary"
+      />
+    </div>
+  )
 }
