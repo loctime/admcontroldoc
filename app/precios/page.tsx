@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PreciosPage() {
   return (
-    <div className="min-h-screen pt-20 px-4 bg-background text-foreground">
+    <div className="min-h-screen pt-20 px-4 bg-transparent text-foreground">
       <div className="max-w-5xl mx-auto mb-1 text-center">
         <h1 className="text-5xl md:text-5xl font-bold mb-4">Planes y Precios</h1>
         <p className="text-muted-foreground text-lg">

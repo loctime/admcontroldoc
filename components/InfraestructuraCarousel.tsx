@@ -36,7 +36,7 @@ export default function InfraestructuraCarousel() {
       <CarouselContent>
         {providers.map((item, index) => (
           <CarouselItem key={index}>
-            <div className="p-6 rounded-xl border bg-white dark:bg-zinc-900 shadow flex flex-col items-center text-center space-y-3">
+            <div className="p-6 rounded-xl border bg-white/80 dark:bg-black/60 shadow flex flex-col items-center text-center space-y-3">
               <Image
                 src={item.logo}
                 alt={item.name}

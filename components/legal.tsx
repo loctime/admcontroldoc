@@ -14,7 +14,7 @@ const Legal = () => {
           En ControlDoc, tu privacidad es nuestra prioridad. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos tu información personal cuando utilizas nuestros servicios. Al acceder a nuestra plataforma, aceptas las prácticas descritas en este documento.
         </p>
 
-        <section className="mb-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <section className="mb-8 p-6 bg-white/80 dark:bg-black/60 rounded-lg border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">1. Protección y Tratamiento de Datos Personales</h2>
           <p className="mb-4">
             Nos comprometemos a proteger tus datos y a utilizarlos de manera responsable. Solo recopilamos la información estrictamente necesaria para ofrecer y mejorar nuestros servicios.
@@ -25,7 +25,7 @@ const Legal = () => {
           </ul>
         </section>
 
-        <section className="mb-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <section className="mb-8 p-6 bg-white/80 dark:bg-black/60 rounded-lg border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">2. Finalidad del Uso de la Información</h2>
           <p className="mb-4">
             La información recopilada se utiliza para los siguientes propósitos:
@@ -37,7 +37,7 @@ const Legal = () => {
           </ul>
         </section>
 
-        <section className="mb-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <section className="mb-8 p-6 bg-white/80 dark:bg-black/60 rounded-lg border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">3. Uso de Cookies</h2>
           <p className="mb-4">
             Utilizamos cookies para personalizar tu experiencia y para análisis estadístico. Puedes gestionar tus preferencias de cookies desde la configuración de tu navegador.
@@ -47,14 +47,14 @@ const Legal = () => {
           </ul>
         </section>
 
-        <section className="mb-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <section className="mb-8 p-6 bg-white/80 dark:bg-black/60 rounded-lg border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">4. Enlaces a Sitios de Terceros</h2>
           <p className="mb-4">
             Nuestra plataforma puede incluir enlaces a sitios web de terceros. No nos hacemos responsables de sus políticas de privacidad ni de su contenido. Te recomendamos leer sus políticas antes de proporcionar cualquier dato.
           </p>
         </section>
 
-        <section className="mb-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <section className="mb-8 p-6 bg-white/80 dark:bg-black/60 rounded-lg border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">5. Control sobre tu Información</h2>
           <p className="mb-4">
             Tienes pleno control sobre tu información personal. En cualquier momento, puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición (ARCO).
@@ -65,7 +65,7 @@ const Legal = () => {
           </ul>
         </section>
 
-        <section className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+        <section className="p-6 bg-white/80 dark:bg-black/60 rounded-lg border border-gray-200 dark:border-gray-700">
           <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-gray-100">6. Modificaciones a esta Política</h2>
           <p>
             ControlDoc se reserva el derecho de modificar esta Política de Privacidad en cualquier momento. Cualquier cambio será notificado a través de nuestra plataforma. Te recomendamos revisar esta página periódicamente para estar informado.
