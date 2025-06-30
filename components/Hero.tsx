@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col items-center text-center py-12 px-4 bg-transparent">
       {/* Bloque superior centrado */}
-      <div className="max-w-3xl w-full">
+      <div className="max-w-3xl w-full pt-12">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Control Documental Total</h1>
         <p className="text-lg text-gray-300 mb-6">
           ControlDoc te ayuda a gestionar y auditar todos los documentos con trazabilidad completa y alertas automáticas.
