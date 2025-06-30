@@ -76,7 +76,7 @@ const FeaturesList: React.FC<FeaturesListProps> = ({ features }) => {
           f.image ? (
             <FeatureCard key={f.title + idx} image={f.image} title={f.title} description={f.description} />
           ) : f.icon ? (
-            <div key={f.title + idx} className="min-w-[18rem] w-72 m-4 bg-white dark:bg-zinc-900 rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-4 transition hover:scale-105 snap-center">
+            <div key={f.title + idx} className="min-w-[18rem] w-72 m-4 bg-transparent rounded-xl shadow-lg overflow-hidden flex flex-col items-center p-4 transition hover:scale-105 snap-center">
               <f.icon className="w-12 h-12 text-primary mb-2" />
               <h3 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">{f.title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-300">{f.description}</p>

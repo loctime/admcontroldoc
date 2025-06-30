@@ -7,10 +7,10 @@ import Team from "@/components/Team"
 
 export default function Page() {
   return (
-    <main>
-      <Hero />
-      <Features />
-      <Contact />
-    </main>
+    <main className="bg-transparent">
+  <Hero />
+  <Features />
+  <Contact />
+</main>
   )
 }

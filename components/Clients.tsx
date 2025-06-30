@@ -12,7 +12,7 @@ export default function Clients() {
           {clients.map((client, index) => (
             <div
               key={index}
-              className="text-center p-4 rounded-lg bg-gray-900/30 border border-primary/10 hover:border-primary/30 transition-all duration-300"
+              className="text-center p-4 rounded-lg border border-primary/10 hover:border-primary/30 transition-all duration-300"
             >
               <div className="text-lg font-semibold text-primary hover:text-primary/30 transition-colors">{client}</div>
             </div>

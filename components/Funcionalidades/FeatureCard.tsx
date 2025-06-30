@@ -11,7 +11,7 @@ interface FeatureCardProps {
     }
 
     return (
-      <div className="min-w-[18rem] w-72 m-4 bg-white dark:bg-zinc-900 rounded-xl shadow-md overflow-hidden transition hover:scale-105 snap-center">
+      <div className="min-w-[18rem] w-72 m-4 rounded-xl shadow-md overflow-hidden transition hover:scale-105 snap-center">
         <img
           src={image}
           alt={generateAltText(title)}

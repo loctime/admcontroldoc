@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background text-foreground pt-20 px-4">
+    <div className="min-h-screen text-foreground pt-20 px-4">
       <div className="max-w-4xl mx-auto mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Panel de Control</h1>
         <p className="text-muted-foreground text-lg">

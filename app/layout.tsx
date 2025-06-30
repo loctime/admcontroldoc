@@ -6,6 +6,7 @@ import "./globals.css"
 import Header from "../components/layout/Header"
 import Footer from "../components/layout/Footer"
 import AppThemeProvider from "../components/theme-provider"
+import GlobalBackground from "../components/GlobalBackground"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -59,11 +60,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html>
-      <body className={`${inter.className} min-h-screen bg-app`}>
+    <html suppressHydrationWarning>
+      <body className={`${inter.className} min-h-screen`}>
         <AppThemeProvider>
+          <GlobalBackground />
           <Header />
-          <main>{children}</main>
+          <main className="relative z-10">{children}</main>
           <Footer />
         </AppThemeProvider>
       </body>

@@ -58,8 +58,7 @@ export default function FuncionalidadesPage() {
         <link rel="canonical" href="https://controldoc.app/funcionalidades" />
       </Head>
       
-      <div className="min-h-screen bg-background text-foreground pt-20 px-4">
-        <div className="max-w-screen-xl mx-auto">
+   <div className="min-h-screen text-foreground pt-20 px-4 bg-transparent">        <div className="max-w-screen-xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
             Funcionalidades de ControlDoc
           </h1>

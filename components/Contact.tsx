@@ -34,7 +34,7 @@ export default function Contact() {
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3  border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
               </div>

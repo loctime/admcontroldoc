@@ -28,7 +28,7 @@ export default function Features() {
   ]
 
   return (
-    <section className="py-8 bg-background" id="features">
+    <section className="py-8 bg-transparent" id="features">
       <h2 className="text-4xl font-bold text-center mb-2">
         Sistema de gestión automática de documentos empresariales
       </h2>
@@ -69,15 +69,15 @@ export default function Features() {
             </p>
             <ul className="space-y-2 text-left">
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                <span className="w-2 h-2 rounded-full mr-3"></span>
                 Seguimiento en tiempo real de todos los documentos empresariales.
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                <span className="w-2 h-2  rounded-full mr-3"></span>
                 Automatización de documentos laborales con lectura inteligente.
               </li>
               <li className="flex items-center">
-                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                <span className="w-2 h-2  rounded-full mr-3"></span>
                 Historial completo de documentos aprobados y cumplimiento normativo.
               </li>
             </ul>
