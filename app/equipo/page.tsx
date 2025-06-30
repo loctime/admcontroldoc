@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function EquipoPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground pt-20 px-4">
+    <div className="min-h-screen bg-transparent text-foreground pt-20 px-4">
       <div className="max-w-4xl mx-auto mb-16 text-center">
         {/* Gradiente azul corporativo para coherencia visual */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary/70 to-primary bg-clip-text text-transparent">Nuestro Equipo</h1>

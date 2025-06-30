@@ -34,7 +34,7 @@ export default function Contact() {
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3  border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white/30 dark:bg-black/30 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
               </div>
@@ -47,7 +47,7 @@ export default function Contact() {
                   id="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-white/30 dark:bg-black/30 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors"
                   required
                 />
               </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/30 dark:bg-black/30 border border-cyan-500/20 rounded-lg focus:border-cyan-500 focus:outline-none transition-colors resize-none"
                   required
                 />
               </div>
