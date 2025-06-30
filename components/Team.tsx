@@ -1,25 +1,22 @@
 "use client"
 
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
-
 export default function Team() {
-
   const team = [
     {
       name: "Ana García",
       role: "CEO & Founder",
-      image: "/placeholder.svg?height=300&width=300&query=professional woman CEO",
+      image: "/placeholder.svg?height=300&width=300",
     },
-    { name: "Carlos López", role: "CTO", image: "/placeholder.svg?height=300&width=300&query=professional man CTO" },
+    { name: "Carlos López", role: "CTO", image: "/placeholder.svg?height=300&width=300" },
     {
       name: "María Rodríguez",
       role: "Lead Developer",
-      image: "/placeholder.svg?height=300&width=300&query=professional woman developer",
+      image: "/placeholder.svg?height=300&width=300",
     },
   ]
 
   return (
-    <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 bg-app-glass">
+    <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           {/* Gradiente azul corporativo para coherencia visual */}

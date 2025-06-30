@@ -7,7 +7,7 @@ import Team from "@/components/Team"
 
 export default function Page() {
   return (
-    <main className="bg-transparent">
+    <main className="relative">
   <Hero />
   <Features />
   <Contact />

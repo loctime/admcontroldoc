@@ -1,6 +1,4 @@
 "use client"
-
-import FeatureCard from "./FeatureCard"
 import FeaturesList from "./FeaturesList"
 
 export default function Features() {
@@ -28,21 +26,19 @@ export default function Features() {
   ]
 
   return (
-    <section className="py-8 bg-transparent" id="features">
-      <h2 className="text-4xl font-bold text-center mb-2">
-        Sistema de gestión automática de documentos empresariales
-      </h2>
+    <section className="py-8" id="features">
+      <h2 className="text-4xl font-bold text-center mb-2">Sistema de gestión automática de documentos empresariales</h2>
       <br />
       <br />
-      
+
       {/* Layout de dos columnas: imagen + texto */}
       <div className="container mx-auto px-4 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Columna de imagen */}
           <div className="flex justify-center lg:justify-start">
-            <img 
-              src="/images/seguimientoDocumentos.jpeg" 
-              alt="ControlDoc: Sistema de control documental y trazabilidad empresarial" 
+            <img
+              src="/images/seguimientoDocumentos.jpeg"
+              alt="ControlDoc: Sistema de control documental y trazabilidad empresarial"
               className="
                 w-full 
                 max-w-md 
@@ -55,17 +51,19 @@ export default function Features() {
                 duration-300 
                 hover:shadow-2xl
                 hover:scale-[1.01]
-              " 
+              "
             />
           </div>
-          
+
           {/* Columna de texto */}
           <div className="text-center lg:text-left max-w-3xl">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.25rem] font-bold text-primary mb-4 leading-snug">
-              ControlDoc centraliza, automatiza y simplifica la gestión documental de tu organización. 
+              ControlDoc centraliza, automatiza y simplifica la gestión documental de tu organización.
             </h3>
             <p className="text-base sm:text-lg xl:text-[1.05rem] text-muted-foreground mb-6 leading-relaxed">
-              Plataforma de control documental para empresas que brinda gestión integral desde la carga guiada hasta la validación final, asegurando cumplimiento normativo, trazabilidad y disponibilidad de todos los documentos requeridos. Optimiza procesos, reduce riesgos y garantiza control total.
+              Plataforma de control documental para empresas que brinda gestión integral desde la carga guiada hasta la
+              validación final, asegurando cumplimiento normativo, trazabilidad y disponibilidad de todos los documentos
+              requeridos. Optimiza procesos, reduce riesgos y garantiza control total.
             </p>
             <ul className="space-y-2 text-left">
               <li className="flex items-center">

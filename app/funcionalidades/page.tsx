@@ -7,27 +7,27 @@ export const metadata: Metadata = {
   title: "Funcionalidades - ControlDoc",
   description:
     "Conoce todas las herramientas de ControlDoc: vencimientos, alertas automáticas, cumplimiento legal y más.",
-    keywords: [
-      "control documental para empresas",
-      "gestión de vencimientos",
-      "documentación laboral",
-      "alertas automáticas de documentos",
-      "cumplimiento normativo empresarial",
-      "plataforma de gestión documental",
-      "sistema de trazabilidad documental",
-      "digitalización de documentos",
-      "software de cumplimiento legal",
-      "gestión de documentos online",
-      "documentación de empleados",
-      "archivado digital seguro",
-      "plataforma SaaS para empresas",
-      "documentación obligatoria Argentina",
-      "gestión ISO 9001 documental"
-    ],
-    robots: {
-      index: true,
-      follow: true,
-    },
+  keywords: [
+    "control documental para empresas",
+    "gestión de vencimientos",
+    "documentación laboral",
+    "alertas automáticas de documentos",
+    "cumplimiento normativo empresarial",
+    "plataforma de gestión documental",
+    "sistema de trazabilidad documental",
+    "digitalización de documentos",
+    "software de cumplimiento legal",
+    "gestión de documentos online",
+    "documentación de empleados",
+    "archivado digital seguro",
+    "plataforma SaaS para empresas",
+    "documentación obligatoria Argentina",
+    "gestión ISO 9001 documental",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     title: "Funcionalidades de ControlDoc",
     description: "Explora cómo ControlDoc revoluciona la gestión documental empresarial.",
@@ -57,11 +57,11 @@ export default function FuncionalidadesPage() {
       <Head>
         <link rel="canonical" href="https://controldoc.app/funcionalidades" />
       </Head>
-      
-   <div className="min-h-screen text-foreground pt-20 px-4 bg-transparent">        <div className="max-w-screen-xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">
-            Funcionalidades de ControlDoc
-          </h1>
+
+      <div className="min-h-screen text-foreground pt-20 px-4">
+        {" "}
+        <div className="max-w-screen-xl mx-auto">
+          <h1 className="text-4xl sm:text-5xl font-bold text-center mb-12">Funcionalidades de ControlDoc</h1>
 
           <Features />
           <FeaturesPro />
@@ -80,14 +80,15 @@ export default function FuncionalidadesPage() {
                 mainEntity: {
                   "@type": "SoftwareApplication",
                   name: "ControlDoc",
-                  description: "Plataforma de gestión documental empresarial con automatización y cumplimiento normativo",
+                  description:
+                    "Plataforma de gestión documental empresarial con automatización y cumplimiento normativo",
                   applicationCategory: "BusinessApplication",
                   operatingSystem: "Web",
                   offers: {
                     "@type": "Offer",
                     price: "0",
-                    priceCurrency: "USD"
-                  }
+                    priceCurrency: "USD",
+                  },
                 },
                 publisher: {
                   "@type": "Organization",
@@ -101,7 +102,7 @@ export default function FuncionalidadesPage() {
               }),
             }}
           />
-          
+
           {/* Testing: Schema.org validation ready */}
           {/* 
             Para testear:

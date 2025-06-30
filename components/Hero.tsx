@@ -17,32 +17,12 @@ export default function Hero() {
   // Determinar qué imagen mostrar según el tema
   const getHeroImage = () => {
     if (!mounted) return "/images/morochar.png" // Default para SSR
-    return theme === 'dark' ? "/images/rubio.png" : "/images/morochar.png"
+    return theme === 'dark' ? "/images/rubior.png" : "/images/morochar.png"
   }
   
   return (
     <section className="relative pt-20 pb-20 px-4 sm:px-6 lg:px-8 bg-transparent">
-     {/* Imagen de fondo para todo el Hero - solo renderizar cuando esté montado */}
-     {mounted && theme === 'light' && (
-       <Image
-         src="/images/blancocasi.png"
-         alt="Fondo Hero ControlDoc"
-         fill
-         className="object-cover object-center -z-10"
-         priority
-       />
-     )}
-
-     {/* Imagen de fondo para todo el Hero - solo renderizar cuando esté montado */}
-     {mounted && theme === 'dark' && (
-       <Image
-         src="/images/azulVerdeBlack.png"
-         alt="Fondo Hero ControlDoc Modo Oscuro"
-         fill
-         className="object-cover object-center -z-10"
-         priority
-       />
-     )}
+     {/* Imagen de fondo para todo el Hero - eliminado para usar solo el fondo global */}
       
       <div className="w-full max-w-6xl mx-auto relative z-10">
         <div className="mb-8">

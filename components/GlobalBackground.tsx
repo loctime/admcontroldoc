@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -11,14 +10,19 @@ export default function GlobalBackground() {
   const src = mounted && theme === "dark"
     ? "/images/azulVerdeBlack.png"
     : "/images/blancocasi.png";
+
   return (
-    <Image
-      src={src}
-      alt="Fondo global"
-      fill
-      className="object-cover object-center -z-50 fixed inset-0 w-full h-full transition-opacity duration-300 select-none pointer-events-none"      priority
+    <div
       aria-hidden
-      draggable={false}
+      style={{
+        position: "fixed",
+        inset: 0,
+        width: "100vw",
+        height: "100vh",
+        zIndex: -50,
+        pointerEvents: "none",
+        background: `url(${src}) center top / cover repeat-y`,
+      }}
     />
   );
 }

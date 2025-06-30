@@ -13,18 +13,36 @@ export default function Pricing() {
   }
 
   const addons = [
-    { id: "pdf-converter", name: "Convertir PDF Automático", description: "Conversión automática de documentos a PDF", price: 15 },
+    {
+      id: "pdf-converter",
+      name: "Convertir PDF Automático",
+      description: "Conversión automática de documentos a PDF",
+      price: 15,
+    },
     { id: "auto-backup", name: "Backup Automático", description: "Respaldo automático diario de tus datos", price: 12 },
     { id: "pdf-reader", name: "Lectura de PDF", description: "Extracción y análisis de contenido PDF", price: 18 },
-    { id: "advanced-analytics", name: "Analytics Avanzado", description: "Reportes detallados y métricas avanzadas", price: 25 },
-    { id: "priority-support", name: "Soporte Prioritario", description: "Soporte 24/7 con respuesta prioritaria", price: 20 },
-    { id: "custom-integrations", name: "Integraciones Personalizadas", description: "Conecta con tus herramientas favoritas", price: 35 },
+    {
+      id: "advanced-analytics",
+      name: "Analytics Avanzado",
+      description: "Reportes detallados y métricas avanzadas",
+      price: 25,
+    },
+    {
+      id: "priority-support",
+      name: "Soporte Prioritario",
+      description: "Soporte 24/7 con respuesta prioritaria",
+      price: 20,
+    },
+    {
+      id: "custom-integrations",
+      name: "Integraciones Personalizadas",
+      description: "Conecta con tus herramientas favoritas",
+      price: 35,
+    },
   ]
 
   const toggleAddon = (addonId: string) => {
-    setSelectedAddons((prev) =>
-      prev.includes(addonId) ? prev.filter((id) => id !== addonId) : [...prev, addonId]
-    )
+    setSelectedAddons((prev) => (prev.includes(addonId) ? prev.filter((id) => id !== addonId) : [...prev, addonId]))
   }
 
   const calculateTotal = () => {
@@ -39,13 +57,13 @@ export default function Pricing() {
     const selectedAddonNames = selectedAddons.map((id) => addons.find((addon) => addon.id === id)?.name).join(", ")
     const message = `Hola, me interesa el Plan Básico ($${basePlan.price}/mes) con las siguientes mejoras: ${selectedAddonNames}. Total: $${calculateTotal()}/mes. ¿Pueden ayudarme a configurarlo?`
     window.open(
-      `mailto:soporte@tuempresa.com?subject=Solicitud de Plan Personalizado&body=${encodeURIComponent(message)}`
+      `mailto:soporte@tuempresa.com?subject=Solicitud de Plan Personalizado&body=${encodeURIComponent(message)}`,
     )
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <section id="pricing" className="py-10 px-4 sm:px-6 lg:px-8 bg-background/80">
+    <div className="min-h-screen text-foreground">
+      <section id="pricing" className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
@@ -153,7 +171,8 @@ export default function Pricing() {
 
               <div className="mt-8 p-4 rounded-lg bg-primary/10 border border-primary/30">
                 <p className="text-sm text-primary/70 text-center">
-                  💡 <strong>Tip:</strong> Selecciona las mejoras que necesites y contacta con nuestro soporte para activar tu plan personalizado
+                  💡 <strong>Tip:</strong> Selecciona las mejoras que necesites y contacta con nuestro soporte para
+                  activar tu plan personalizado
                 </p>
               </div>
             </div>
