@@ -20,12 +20,36 @@ export default function Hero() {
     return theme === 'dark' ? "/images/rubior.png" : "/images/morochar.png"
   }
 
+  // Colores dinámicos según tema
+  const getTextColors = () => {
+    if (!mounted) return {
+      title: "text-white",
+      subtitle: "text-gray-300",
+      body: "text-gray-200",
+      link: "text-blue-400"
+    }
+    
+    return theme === 'dark' ? {
+      title: "text-white",
+      subtitle: "text-gray-300", 
+      body: "text-gray-200",
+      link: "text-blue-400"
+    } : {
+      title: "text-gray-900",
+      subtitle: "text-gray-700",
+      body: "text-gray-600", 
+      link: "text-blue-600"
+    }
+  }
+
+  const colors = getTextColors()
+
   return (
     <section className="flex flex-col items-center text-center py-12 px-4 bg-transparent">
       {/* Bloque superior centrado */}
       <div className="max-w-3xl w-full pt-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Control Documental Total</h1>
-        <p className="text-lg text-gray-300 mb-6">
+        <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${colors.title}`}>Control Documental Total</h1>
+        <p className={`text-lg mb-6 ${colors.subtitle}`}>
           ControlDoc te ayuda a gestionar y auditar todos los documentos con trazabilidad completa y alertas automáticas.
         </p>
         <div className="flex justify-center gap-4 flex-wrap mb-2">
@@ -38,7 +62,7 @@ export default function Hero() {
             Contactar
             <ArrowRight className="inline ml-2 w-5 h-5 align-middle" />
           </a>
-          <button className="border border-white text-white font-semibold py-2 px-6 rounded hover:bg-white hover:text-blue-900 transition">
+          <button className={`border ${colors.title === 'text-white' ? 'border-white text-white hover:bg-white hover:text-blue-900' : 'border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white'} font-semibold py-2 px-6 rounded transition`}>
             Ver Demo
           </button>
         </div>
@@ -47,19 +71,19 @@ export default function Hero() {
       {/* Bloque inferior dividido */}
       <div className="flex flex-col-reverse md:flex-row justify-between items-center max-w-6xl w-full mt-16 gap-12">
         {/* Texto izquierdo */}
-        <div className="flex-1 text-left text-gray-200">
-          <h2 className="text-3xl font-bold text-white mb-4">ControlDoc: Gestión documental automática y sin errores</h2>
+        <div className={`flex-1 text-left ${colors.body}`}>
+          <h2 className={`text-3xl font-bold mb-4 ${colors.title}`}>ControlDoc: Gestión documental automática y sin errores</h2>
           <p className="mb-6">
             Olvidate de los vencimientos, la carga manual y los documentos perdidos. Con ControlDoc, automatizás alertas, guiás a tu equipo y mantenés todo actualizado al instante.
           </p>
           <ul className="flex flex-wrap gap-4 text-sm mb-4">
-            <li className="bg-blue-800 py-2 px-4 rounded">Alertas</li>
-            <li className="bg-blue-800 py-2 px-4 rounded">Biblioteca</li>
-            <li className="bg-blue-800 py-2 px-4 rounded">Carpetas</li>
-            <li className="bg-blue-800 py-2 px-4 rounded">Registros</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Alertas</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Biblioteca</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Carpetas</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Registros</li>
           </ul>
           <p className="mb-4 font-semibold">Más control. Menos errores.</p>
-          <a href="#" className="text-blue-400 underline hover:text-blue-300">Probalo ahora y simplificá tu gestión</a>
+          <a href="#" className={`underline hover:opacity-80 transition ${colors.link}`}>Probalo ahora y simplificá tu gestión</a>
         </div>
 
         {/* Imagen y carrusel derecho */}

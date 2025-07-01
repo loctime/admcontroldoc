@@ -33,8 +33,17 @@ export default function FeaturesPro() {
   ]
 
   return (
-    <FeaturesList
-      features={proFeatures}
-    />
+    <section className="py-8 w-full max-w-full mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl font-bold text-center mb-8">Funcionalidades Avanzadas</h2>
+        <p className="text-center text-muted-foreground mb-8 text-xl">
+          Características profesionales para una gestión documental completa
+        </p>
+        
+        <div className="w-full">
+          <FeaturesList features={proFeatures} />
+        </div>
+      </div>
+    </section>
   )
 }

@@ -11,7 +11,7 @@ interface FeatureCardProps {
     }
 
     return (
-      <div className="min-w-[18rem] w-72 m-4 rounded-xl shadow-md overflow-hidden transition hover:scale-105 snap-center">
+      <div className="min-w-[18rem] w-72 mx-2 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 snap-center">
         <img
           src={image}
           alt={generateAltText(title)}
@@ -19,9 +19,9 @@ interface FeatureCardProps {
           loading="lazy"
         />
         <div className="p-4">
-          <h3 className="text-lg font-semibold mb-1 text-gray-800 dark:text-white">{title}</h3>
+          <h3 className="text-lg font-semibold mb-2 text-gray-800 dark:text-white">{title}</h3>
           {description && (
-            <p className="text-sm text-gray-600 dark:text-gray-300">{description}</p>
+            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{description}</p>
           )}
         </div>
       </div>

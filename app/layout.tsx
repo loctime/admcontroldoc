@@ -65,7 +65,9 @@ export default function RootLayout({
         <AppThemeProvider>
           <GlobalBackground />
           <Header />
-          <main className="relative z-10">{children}</main>
+          <main className="relative z-10 w-full max-w-full mx-auto">
+            {children}
+          </main>
           <Footer />
         </AppThemeProvider>
       </body>

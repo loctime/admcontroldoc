@@ -9,7 +9,6 @@ export default function Footer() {
     product: [
       { name: "Unir PDF automáticamente", href: "/unir-pdf" }, // SEO first
       { name: "Funcionalidades", href: "/funcionalidades" },
-      { name: "Precios", href: "/precios" },
       { name: "Demo", href: "/contacto" },
     ],
     company: [
@@ -47,15 +46,15 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-2" />
-                <span className="text-sm">contacto@controldoc.app</span>
+                <span className="text-sm">controldoc@controldoc.app</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-2" />
-                <span className="text-sm">+34 900 123 456</span>
+                <span className="text-sm">+54 9 294 492-1510</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span className="text-sm">Madrid, España</span>
+                <span className="text-sm">Argentina</span>
               </div>
             </div>
           </div>

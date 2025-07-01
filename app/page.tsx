@@ -7,10 +7,10 @@ import Team from "@/components/Team"
 
 export default function Page() {
   return (
-    <main className="relative">
-  <Hero />
-  <Features />
-  <Contact />
-</main>
+    <div className="w-full max-w-full mx-auto">
+      <Hero />
+      <Features />
+      <Contact />
+    </div>
   )
 }

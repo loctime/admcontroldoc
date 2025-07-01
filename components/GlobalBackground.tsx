@@ -16,12 +16,15 @@ export default function GlobalBackground() {
       aria-hidden
       style={{
         position: "fixed",
-        inset: 0,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
         width: "100vw",
         height: "100vh",
         zIndex: -50,
         pointerEvents: "none",
-        background: `url(${src}) center top / cover repeat-y`,
+        background: `url(${src}) center center / cover no-repeat`,
       }}
     />
   );

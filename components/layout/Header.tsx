@@ -19,8 +19,8 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border backdrop-blur-md bg-white/70 dark:bg-black/60">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <FileText className="h-8 w-8" style={{ color: "hsl(var(--primary))" }} />
@@ -61,7 +61,7 @@ export default function Header() {
             </button>
           </div>
           
-        </div>
+        </nav>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -84,7 +84,7 @@ export default function Header() {
             </div>
           </div>
         )}
-      </nav>
+      </div>
     </header>
   )
 }
