@@ -16,27 +16,27 @@ export default function EficienciaOperativaPage() {
       </div>
 
       {/* Card principal */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Optimización Documental</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-900 dark:text-white text-lg">
             Nuestra solución permite que los documentos requeridos estén disponibles en tiempo real, asegurando un flujo de trabajo ágil. Facilita la toma de decisiones, evita retrasos y reduce el riesgo de errores humanos.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg shadow-sm">
+            <div className="flex items-start gap-4 p-4 rounded-lg shadow-sm">
               <Clock className="text-blue-600 w-8 h-8" />
               <div>
                 <h3 className="font-semibold text-lg">70% menos tiempo</h3>
-                <p className="text-gray-600">en búsqueda de documentos gracias a la centralización.</p>
+                <p className="text-gray-900 dark:text-white">en búsqueda de documentos gracias a la centralización.</p>
               </div>
             </div>
-            <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg shadow-sm">
+            <div className="flex items-start gap-4 p-4 rounded-lg shadow-sm">
               <Layers className="text-green-600 w-8 h-8" />
               <div>
                 <h3 className="font-semibold text-lg">100% digitalizado</h3>
-                <p className="text-gray-600">para un flujo de trabajo sin papel ni retrasos físicos.</p>
+                <p className="text-gray-900 dark:text-white">para un flujo de trabajo sin papel ni retrasos físicos.</p>
               </div>
             </div>
           </div>
@@ -44,7 +44,7 @@ export default function EficienciaOperativaPage() {
       </Card>
 
       {/* Beneficios clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Beneficios clave</CardTitle>
         </CardHeader>
@@ -59,7 +59,7 @@ export default function EficienciaOperativaPage() {
             ].map((benefit, i) => (
               <li key={i} className="flex items-start gap-3">
                 <CheckCircle className="text-blue-600 mt-1" />
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-gray-900 dark:text-white">{benefit}</span>
               </li>
             ))}
           </ul>
@@ -67,30 +67,30 @@ export default function EficienciaOperativaPage() {
       </Card>
 
       {/* Card de métricas */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Impacto en tus operaciones</CardTitle>
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <h3 className="text-4xl font-bold text-green-700">50%</h3>
-            <p className="text-gray-700">Reducción de costos operativos</p>
+            <p className="text-gray-900 dark:text-white">Reducción de costos operativos</p>
           </div>
-          <div className="bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <h3 className="text-4xl font-bold text-yellow-700">3x</h3>
-            <p className="text-gray-700">Más rápida la aprobación de documentos</p>
+            <p className="text-gray-900 dark:text-white">Más rápida la aprobación de documentos</p>
           </div>
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <h3 className="text-4xl font-bold text-blue-700">90%</h3>
-            <p className="text-gray-700">Disminución en extravío de archivos</p>
+            <p className="text-gray-900 dark:text-white">Disminución en extravío de archivos</p>
           </div>
         </CardContent>
       </Card>
 
       {/* Llamada a la acción final */}
-      <div className="bg-gray-100 rounded-2xl p-8 text-center shadow">
+      <div className="rounded-2xl p-8 text-center shadow-lg backdrop-blur-sm bg-white/60 dark:bg-gray-900/60">
         <h2 className="text-2xl font-bold mb-2">¿Listo para mejorar la eficiencia?</h2>
-        <p className="text-gray-700 mb-4">Empieza hoy a optimizar tu gestión documental y lleva tu empresa al siguiente nivel.</p>
+        <p className="text-gray-900 dark:text-white mb-4">Empieza hoy a optimizar tu gestión documental y lleva tu empresa al siguiente nivel.</p>
         <button className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition">
           Solicitar demo gratuita
         </button>

@@ -33,7 +33,7 @@ export default function UsuariosPage() {
         </TabsList>
 
         <TabsContent value="auth" className="space-y-6">
-          <Card>
+          <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <Shield className="h-5 w-5" />
@@ -78,7 +78,7 @@ export default function UsuariosPage() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
             <CardHeader>
               <CardTitle>Flujo de Autenticación</CardTitle>
             </CardHeader>
@@ -109,7 +109,7 @@ export default function UsuariosPage() {
         </TabsContent>
 
         <TabsContent value="panel" className="space-y-6">
-          <Card>
+          <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <Users className="h-5 w-5" />
@@ -158,7 +158,7 @@ export default function UsuariosPage() {
         </TabsContent>
 
         <TabsContent value="roles" className="space-y-6">
-          <Card>
+          <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <UserCheck className="h-5 w-5" />
@@ -168,7 +168,7 @@ export default function UsuariosPage() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card>
+                <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
                   <CardHeader>
                     <CardTitle className="text-lg">Super Admin</CardTitle>
                     <Badge variant="destructive">Máximo Acceso</Badge>
@@ -184,7 +184,7 @@ export default function UsuariosPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
                   <CardHeader>
                     <CardTitle className="text-lg">Admin Empresa</CardTitle>
                     <Badge variant="default">Acceso Empresarial</Badge>
@@ -200,7 +200,7 @@ export default function UsuariosPage() {
                   </CardContent>
                 </Card>
 
-                <Card>
+                <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
                   <CardHeader>
                     <CardTitle className="text-lg">Usuario</CardTitle>
                     <Badge variant="secondary">Acceso Básico</Badge>
@@ -221,7 +221,7 @@ export default function UsuariosPage() {
         </TabsContent>
 
         <TabsContent value="admin" className="space-y-6">
-          <Card>
+          <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <Settings className="h-5 w-5" />

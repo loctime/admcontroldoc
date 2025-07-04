@@ -16,22 +16,22 @@ export default function CumplimientoLegalPage() {
       </div>
 
       {/* Card principal */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Garantiza la legalidad en cada proceso</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-900 dark:text-white text-lg">
             Nuestra plataforma facilita el cumplimiento con leyes laborales, de seguridad, higiene, medioambiente y fiscales. Todos tus documentos estarán siempre actualizados y disponibles para auditorías o inspecciones.
           </p>
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-900 dark:text-white text-lg">
             Gracias a un sistema de trazabilidad, se registra cada acción sobre los documentos, permitiendo evidenciar ante terceros el cumplimiento de obligaciones. El almacenamiento seguro garantiza protección ante accesos no autorizados.
           </p>
         </CardContent>
       </Card>
 
       {/* Beneficios clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Beneficios clave</CardTitle>
         </CardHeader>
@@ -46,7 +46,7 @@ export default function CumplimientoLegalPage() {
             ].map((benefit, i) => (
               <li key={i} className="flex items-start gap-3">
                 <CheckCircle className="text-indigo-600 mt-1" />
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-gray-900 dark:text-white">{benefit}</span>
               </li>
             ))}
           </ul>
@@ -54,33 +54,33 @@ export default function CumplimientoLegalPage() {
       </Card>
 
       {/* Cards de métricas */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Impacto en cumplimiento</CardTitle>
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-indigo-100 to-indigo-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <ShieldCheck className="mx-auto text-indigo-700 w-10 h-10 mb-2" />
             <h3 className="text-2xl font-bold text-indigo-700">99.9%</h3>
-            <p className="text-gray-700">Disponibilidad de documentos ante auditorías</p>
+            <p className="text-gray-900 dark:text-white">Disponibilidad de documentos ante auditorías</p>
           </div>
-          <div className="bg-gradient-to-br from-red-100 to-red-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <AlertCircle className="mx-auto text-red-700 w-10 h-10 mb-2" />
             <h3 className="text-2xl font-bold text-red-700">0 sanciones</h3>
-            <p className="text-gray-700">en empresas con gestión documental actualizada</p>
+            <p className="text-gray-900 dark:text-white">en empresas con gestión documental actualizada</p>
           </div>
-          <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <FileCheck className="mx-auto text-green-700 w-10 h-10 mb-2" />
             <h3 className="text-2xl font-bold text-green-700">100%</h3>
-            <p className="text-gray-700">Trazabilidad de documentos</p>
+            <p className="text-gray-900 dark:text-white">Trazabilidad de documentos</p>
           </div>
         </CardContent>
       </Card>
 
       {/* Llamada a la acción final */}
-      <div className="bg-gray-100 rounded-2xl p-8 text-center shadow">
+      <div className="rounded-2xl p-8 text-center shadow-lg backdrop-blur-sm bg-white/10 dark:bg-gray-900/30">
         <h2 className="text-2xl font-bold mb-2">¿Preparado para garantizar el cumplimiento legal?</h2>
-        <p className="text-gray-700 mb-4">Asegura tu tranquilidad con un sistema que protege y certifica cada documento.</p>
+        <p className="text-gray-900 dark:text-white mb-4">Asegura tu tranquilidad con un sistema que protege y certifica cada documento.</p>
         <button className="bg-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-indigo-700 transition">
           Comenzar ahora
         </button>

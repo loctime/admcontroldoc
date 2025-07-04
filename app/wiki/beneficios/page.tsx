@@ -126,15 +126,15 @@ export default function BeneficiosPage() {
         </CardHeader>
         <CardContent className="text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <div className="bg-white/20 rounded-lg p-4">
+            <div className="rounded-lg p-4">
               <div className="text-2xl font-bold">3 meses</div>
               <p className="text-green-100">Tiempo de recuperación</p>
             </div>
-            <div className="bg-white/20 rounded-lg p-4">
+            <div className="rounded-lg p-4">
               <div className="text-2xl font-bold">300%</div>
               <p className="text-green-100">ROI en el primer año</p>
             </div>
-            <div className="bg-white/20 rounded-lg p-4">
+            <div className="rounded-lg p-4">
               <div className="text-2xl font-bold">$40K+</div>
               <p className="text-green-100">Ahorro promedio anual</p>
             </div>
@@ -156,7 +156,7 @@ export default function BeneficiosPage() {
               <Card key={index} className="hover:shadow-lg transition-shadow border-0 shadow-md">
                 <CardHeader>
                   <div className="flex items-center space-x-4">
-                    <div className={`w-12 h-12 ${beneficio.bgColor} rounded-lg flex items-center justify-center`}>
+                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center`}>
                       <Icon className={`h-6 w-6 ${beneficio.color}`} />
                     </div>
                     <div className="flex-1">
@@ -166,14 +166,14 @@ export default function BeneficiosPage() {
                       </Badge>
                     </div>
                   </div>
-                  <CardDescription className="text-base">{beneficio.description}</CardDescription>
+                  <CardDescription className="text-base text-gray-900 dark:text-white">{beneficio.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {beneficio.details.map((detail, idx) => (
                       <li key={idx} className="flex items-start space-x-2">
                         <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm text-gray-600">{detail}</span>
+                        <span className="text-sm text-gray-900 dark:text-white">{detail}</span>
                       </li>
                     ))}
                   </ul>
@@ -188,7 +188,7 @@ export default function BeneficiosPage() {
       <div className="space-y-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Casos de Éxito Reales</h2>
-          <p className="text-gray-600 text-lg">Empresas que ya transformaron su gestión documental</p>
+          <p className="text-gray-900 dark:text-white text-lg">Empresas que ya transformaron su gestión documental</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -199,20 +199,20 @@ export default function BeneficiosPage() {
                   <CardTitle className="text-lg">{caso.empresa}</CardTitle>
                   <Badge variant="outline">{caso.sector}</Badge>
                 </div>
-                <CardDescription>{caso.descripcion}</CardDescription>
+                <CardDescription className="text-gray-900 dark:text-white">{caso.descripcion}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-3 bg-green-50 rounded-lg">
+                  <div className="text-center p-3 rounded-lg">
                     <div className="font-bold text-green-600">{caso.ahorro}</div>
-                    <p className="text-xs text-gray-600">Ahorro anual</p>
+                    <p className="text-xs text-gray-900 dark:text-white">Ahorro anual</p>
                   </div>
-                  <div className="text-center p-3 bg-blue-50 rounded-lg">
+                  <div className="text-center p-3 rounded-lg">
                     <div className="font-bold text-blue-600">{caso.tiempo}</div>
-                    <p className="text-xs text-gray-600">Reducción tiempo</p>
+                    <p className="text-xs text-gray-900 dark:text-white">Reducción tiempo</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-between text-sm text-gray-600">
+                <div className="flex items-center justify-between text-sm text-gray-900 dark:text-white">
                   <span>{caso.empleados} empleados</span>
                   <Button variant="ghost" size="sm">
                     Ver caso completo
@@ -226,10 +226,10 @@ export default function BeneficiosPage() {
       </div>
 
       {/* Comparación Antes/Después */}
-      <Card className="bg-gray-50 border-0">
+      <Card className="border-0">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Antes vs Después</CardTitle>
-          <CardDescription>La transformación que experimentarás</CardDescription>
+          <CardDescription className="text-gray-900 dark:text-white">La transformación que experimentarás</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -241,23 +241,23 @@ export default function BeneficiosPage() {
               <ul className="space-y-3">
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <span>Búsqueda de documentos toma 15-30 minutos</span>
+                  <span className="text-gray-900 dark:text-white">Búsqueda de documentos toma 15-30 minutos</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <span>Documentos perdidos o extraviados</span>
+                  <span className="text-gray-900 dark:text-white">Documentos perdidos o extraviados</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <span>Multas por documentos vencidos</span>
+                  <span className="text-gray-900 dark:text-white">Multas por documentos vencidos</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <span>Espacio físico ocupado por archivos</span>
+                  <span className="text-gray-900 dark:text-white">Espacio físico ocupado por archivos</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <span>Procesos manuales lentos y propensos a errores</span>
+                  <span className="text-gray-900 dark:text-white">Procesos manuales lentos y propensos a errores</span>
                 </li>
               </ul>
             </div>
@@ -270,23 +270,23 @@ export default function BeneficiosPage() {
               <ul className="space-y-3">
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Encuentra cualquier documento en segundos</span>
+                  <span className="text-gray-900 dark:text-white">Encuentra cualquier documento en segundos</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Documentos seguros y siempre disponibles</span>
+                  <span className="text-gray-900 dark:text-white">Documentos seguros y siempre disponibles</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Alertas automáticas de vencimientos</span>
+                  <span className="text-gray-900 dark:text-white">Alertas automáticas de vencimientos</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Oficina sin papel, más espacio útil</span>
+                  <span className="text-gray-900 dark:text-white">Oficina sin papel, más espacio útil</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
-                  <span>Automatización completa de procesos</span>
+                  <span className="text-gray-900 dark:text-white">Automatización completa de procesos</span>
                 </li>
               </ul>
             </div>

@@ -16,46 +16,46 @@ export default function SeguridadYBackupsPage() {
       </div>
 
       {/* Card principal */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Protección completa de tu documentación</CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-900 dark:text-white text-lg">
             Nuestra plataforma asegura la disponibilidad y seguridad de tus documentos mediante backups automáticos en la nube y almacenamiento cifrado, evitando la pérdida de información y garantizando la continuidad operativa ante cualquier eventualidad.
           </p>
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-900 dark:text-white text-lg">
             Los registros de acceso y las copias de seguridad permiten una rápida recuperación en caso de errores o eliminación accidental, reduciendo al mínimo los riesgos y tiempos de inactividad.
           </p>
         </CardContent>
       </Card>
 
       {/* Cards de métricas */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Seguridad en números</CardTitle>
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-green-100 to-green-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <Shield className="mx-auto text-green-700 w-10 h-10 mb-2" />
             <h3 className="text-2xl font-bold text-green-700">99.99%</h3>
-            <p className="text-gray-700">Disponibilidad de los archivos</p>
+            <p className="text-gray-900 dark:text-white">Disponibilidad de los archivos</p>
           </div>
-          <div className="bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <Database className="mx-auto text-emerald-700 w-10 h-10 mb-2" />
             <h3 className="text-2xl font-bold text-emerald-700">Backups diarios</h3>
-            <p className="text-gray-700">Copias automáticas para restauración inmediata</p>
+            <p className="text-gray-900 dark:text-white">Copias automáticas para restauración inmediata</p>
           </div>
-          <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl p-6 text-center shadow">
+          <div className="rounded-xl p-6 text-center shadow">
             <Lock className="mx-auto text-blue-700 w-10 h-10 mb-2" />
             <h3 className="text-2xl font-bold text-blue-700">Cifrado AES-256</h3>
-            <p className="text-gray-700">Seguridad avanzada en cada documento</p>
+            <p className="text-gray-900 dark:text-white">Seguridad avanzada en cada documento</p>
           </div>
         </CardContent>
       </Card>
 
       {/* Beneficios clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Beneficios clave</CardTitle>
         </CardHeader>
@@ -70,7 +70,7 @@ export default function SeguridadYBackupsPage() {
             ].map((benefit, i) => (
               <li key={i} className="flex items-start gap-3">
                 <Cloud className="text-green-600 mt-1" />
-                <span className="text-gray-700">{benefit}</span>
+                <span className="text-gray-900 dark:text-white">{benefit}</span>
               </li>
             ))}
           </ul>
@@ -78,9 +78,9 @@ export default function SeguridadYBackupsPage() {
       </Card>
 
       {/* Llamada a la acción final */}
-      <div className="bg-gray-100 rounded-2xl p-8 text-center shadow">
+      <div className="rounded-2xl p-8 text-center shadow-lg backdrop-blur-sm bg-white/10 dark:bg-gray-900/30">
         <h2 className="text-2xl font-bold mb-2">¿Listo para proteger tu información?</h2>
-        <p className="text-gray-700 mb-4">Solicita más información sobre cómo mantener tus archivos seguros y disponibles en todo momento.</p>
+        <p className="text-gray-900 dark:text-white mb-4">Solicita más información sobre cómo mantener tus archivos seguros y disponibles en todo momento.</p>
         <button className="bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition">
           Contactar equipo de ventas
         </button>

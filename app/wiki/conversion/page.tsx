@@ -16,11 +16,11 @@ export default function ConversionPage() {
       </div>
 
       {/* Descripción general */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Flujo de conversión unificado</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             La plataforma permite convertir imágenes, archivos Word, Excel y otros formatos comunes a PDF para estandarizar la gestión documental y mejorar la compatibilidad entre dispositivos y sistemas.
           </p>
@@ -31,12 +31,12 @@ export default function ConversionPage() {
       </Card>
 
       {/* Tecnologías clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Code className="text-yellow-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Tecnologías utilizadas</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <ul className="list-disc list-inside space-y-2">
             <li>
               <strong>pdf-lib:</strong> Para generar nuevos PDFs, combinar múltiples documentos y aplicar procesamiento en el lado del cliente o backend.
@@ -55,12 +55,12 @@ export default function ConversionPage() {
       </Card>
 
       {/* Proceso técnico */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Settings className="text-orange-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Flujo técnico de conversión</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p className="font-semibold">Etapas del proceso:</p>
           <ul className="list-decimal list-inside space-y-2">
             <li>Recepción del archivo cargado (imagen, Word, Excel, PDF, etc.).</li>
@@ -78,12 +78,12 @@ export default function ConversionPage() {
       </Card>
 
       {/* Beneficios clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <ArrowRightLeft className="text-yellow-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Beneficios de la conversión automática</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <ul className="list-disc list-inside space-y-2">
             <li>Homogeneiza la documentación en un formato PDF estándar.</li>
             <li>Facilita la visualización, el almacenamiento y la integración con OCR.</li>

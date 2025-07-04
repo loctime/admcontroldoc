@@ -16,11 +16,11 @@ export default function CargaMasivaPage() {
       </div>
 
       {/* Descripción general */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Proceso de carga masiva unificado</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             El sistema permite a los usuarios seleccionar múltiples archivos desde sus dispositivos y cargarlos de forma simultánea, gestionando automáticamente el procesamiento y el almacenamiento en la nube.
           </p>
@@ -31,12 +31,12 @@ export default function CargaMasivaPage() {
       </Card>
 
       {/* Gestión de colas */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Server className="text-teal-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Manejo de colas y procesamiento paralelo</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             La plataforma utiliza un sistema de colas que organiza los archivos cargados y los procesa en paralelo cuando es posible, manteniendo un equilibrio entre velocidad y consumo de recursos.
           </p>
@@ -47,12 +47,12 @@ export default function CargaMasivaPage() {
       </Card>
 
       {/* Validación y control de errores */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Shield className="text-green-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Validación y control de calidad</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <ul className="list-disc list-inside space-y-2">
             <li>Valida el formato, tamaño y seguridad de cada archivo antes de procesarlo.</li>
             <li>Identifica archivos corruptos o incompatibles y notifica al usuario.</li>
@@ -63,12 +63,12 @@ export default function CargaMasivaPage() {
       </Card>
 
       {/* Beneficios clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Layers className="text-teal-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Beneficios de la carga masiva</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <ul className="list-disc list-inside space-y-2">
             <li>Ahorra tiempo al eliminar la carga manual archivo por archivo.</li>
             <li>Mejora la productividad del equipo al permitir grandes actualizaciones en minutos.</li>

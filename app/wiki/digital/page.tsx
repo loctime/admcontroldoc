@@ -16,11 +16,11 @@ export default function DigitalizacionPage() {
       </div>
 
       {/* Descripción general */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Descripción general del sistema</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             El sistema de procesamiento de documentos es el componente técnico principal responsable de analizar, procesar y mostrar documentos dentro de la plataforma. Maneja OCR, conversión de formatos, extracción de contenido y visualización interactiva con capacidades de búsqueda.
           </p>
@@ -31,12 +31,12 @@ export default function DigitalizacionPage() {
       </Card>
 
       {/* Integración OCR */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Code className="text-indigo-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Integración de OCR y extracción de texto</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             Utilizamos <strong>Tesseract.js</strong> para el reconocimiento óptico de caracteres (OCR) en múltiples tipos de documentos.
           </p>
@@ -51,12 +51,12 @@ export default function DigitalizacionPage() {
       </Card>
 
       {/* Sistema de búsqueda y resaltado */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Search className="text-cyan-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Sistema de búsqueda y resaltado</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>El sistema permite realizar búsquedas en tiempo real dentro de documentos procesados con retroalimentación visual inmediata.</p>
           <p className="font-semibold">Proceso de normalización de texto:</p>
           <ul className="list-disc list-inside space-y-2">
@@ -76,12 +76,12 @@ export default function DigitalizacionPage() {
       </Card>
 
       {/* Vista previa técnica */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Eye className="text-purple-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Componentes de visualización</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             Los documentos procesados se muestran en un visor interactivo con soporte de búsqueda y resaltado: <code>TextViewerCanvas</code>. Este componente permite explorar documentos de manera ágil y precisa.
           </p>

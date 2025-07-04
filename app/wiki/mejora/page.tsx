@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { Image, Wrench, Magic, Layers } from "lucide-react"
+import { Image, Wrench, WandSparkles, Layers } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function MejoraPage() {
@@ -16,11 +16,11 @@ export default function MejoraPage() {
       </div>
 
       {/* Descripción general */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Optimización inteligente de imágenes</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p>
             Cada imagen cargada en la plataforma pasa por un proceso de mejora automático para optimizar su contraste, brillo, nitidez y eliminar imperfecciones que puedan dificultar la lectura por parte del usuario o el motor OCR.
           </p>
@@ -31,12 +31,12 @@ export default function MejoraPage() {
       </Card>
 
       {/* Tecnologías utilizadas */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Wrench className="text-purple-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Tecnologías y algoritmos</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <ul className="list-disc list-inside space-y-2">
             <li>
               <strong>sharp:</strong> Biblioteca de procesamiento de imágenes de alto rendimiento utilizada para rotación, escalado y ajuste de calidad.
@@ -55,12 +55,12 @@ export default function MejoraPage() {
       </Card>
 
       {/* Flujo de procesamiento */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
           <Layers className="text-pink-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Flujo técnico de mejora</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <p className="font-semibold">Etapas del proceso:</p>
           <ul className="list-decimal list-inside space-y-2">
             <li>Recepción de la imagen cargada por el usuario.</li>
@@ -73,12 +73,12 @@ export default function MejoraPage() {
       </Card>
 
       {/* Beneficios clave */}
-      <Card>
+      <Card className="backdrop-blur-sm bg-white/10 dark:bg-gray-900/30 shadow-lg border-0">
         <CardHeader className="flex items-center gap-3">
-          <Magic className="text-purple-600 w-8 h-8" />
+          <WandSparkles className="text-purple-600 w-8 h-8" />
           <CardTitle className="text-2xl font-bold">Beneficios de la mejora automática</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4 text-gray-700">
+        <CardContent className="space-y-4 text-gray-900 dark:text-white">
           <ul className="list-disc list-inside space-y-2">
             <li>Facilita el reconocimiento OCR aumentando la precisión de lectura.</li>
             <li>Mejora la calidad visual de los documentos guardados en la plataforma.</li>
