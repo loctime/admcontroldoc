@@ -4,12 +4,13 @@ import Features from "@/components/Funcionalidades/Features"
 import Pricing from "@/components/Pricing"
 import Contact from "@/components/Contact"
 import Team from "@/components/Team"
-
+import WikiPreview from "@/components/wiki/WikiPreview"
 export default function Page() {
   return (
     <div className="w-full max-w-full mx-auto">
       <Hero />
       <Features />
+      <WikiPreview />
       <Contact />
     </div>
   )

@@ -72,17 +72,19 @@ export default function Hero() {
       <div className="flex flex-col-reverse md:flex-row justify-between items-center max-w-6xl w-full mt-16 gap-12">
         {/* Texto izquierdo */}
         <div className={`flex-1 text-left ${colors.body}`}>
-          <h2 className={`text-3xl font-bold mb-4 ${colors.title}`}>ControlDoc: Gestión documental automática y sin errores</h2>
+          <h2 className={`text-3xl font-bold mb-4 ${colors.title}`}>ControlDoc: Gestión documental avanzada y automatizada</h2>
           <p className="mb-6">
-            Olvidate de los vencimientos, la carga manual y los documentos perdidos. Con ControlDoc, automatizás alertas, guiás a tu equipo y mantenés todo actualizado al instante.
+            ControlDoc es una plataforma integral de gestión documental diseñada para organizaciones que necesitan recopilar, procesar, revisar y aprobar documentos provenientes de múltiples empresas o entidades.
           </p>
+          <p className="mb-6">
+          El sistema ofrece capacidades avanzadas de procesamiento automático de documentos como extracción de texto mediante OCR, análisis inteligente de archivos y flujos de trabajo estructurados para la revisión y aprobación, con controles administrativos basados en roles.          </p>
           <ul className="flex flex-wrap gap-4 text-sm mb-4">
-            <li className="bg-blue-800 py-2 px-4 rounded text-white">Alertas</li>
-            <li className="bg-blue-800 py-2 px-4 rounded text-white">Biblioteca</li>
-            <li className="bg-blue-800 py-2 px-4 rounded text-white">Carpetas</li>
-            <li className="bg-blue-800 py-2 px-4 rounded text-white">Registros</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">OCR</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Análisis IA</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Workflows</li>
+            <li className="bg-blue-800 py-2 px-4 rounded text-white">Control Roles</li>
           </ul>
-          <p className="mb-4 font-semibold">Más control. Menos errores.</p>
+          <p className="mb-4 font-semibold">Automatizá cada paso y llevá tu gestión documental a otro nivel.</p>
           <a href="#" className={`underline hover:opacity-80 transition ${colors.link}`}>Probalo ahora y simplificá tu gestión</a>
         </div>
 

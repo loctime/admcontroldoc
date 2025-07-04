@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Globe, FileText } from "lucide-react";
+import { Menu, X, Globe, FileText, BookOpen } from "lucide-react";
 
 export default function AccessibleHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,11 +12,12 @@ export default function AccessibleHeader() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const navigation = [
-    { name: t("nav_home"), href: "/" },
-    { name: t("nav_features"), href: "/funcionalidades" },
-    { name: t("nav_pricing"), href: "/precios" },
-    { name: t("nav_clients"), href: "/clientes" },
-    { name: t("nav_contact"), href: "/contacto" },
+    { name: "Inicio", href: "/" },
+    { name: "Funcionalidades", href: "/funcionalidades" },
+    { name: "Precios", href: "/precios" },
+    { name: "Clientes", href: "/clientes" },
+    { name: "Contacto", href: "/contacto" },
+    { name: "Wiki", href: "/wiki/panel-usuario", icon: BookOpen },
   ]
 
   const isActive = (path: string) => pathname === path;
@@ -89,26 +90,14 @@ export default function AccessibleHeader() {
                 }`}
                 aria-current={isActive(item.href) ? "page" : undefined}
               >
+                {item.icon ? <item.icon className="inline w-5 h-5 mr-1 align-text-bottom" aria-hidden="true" /> : null}
                 {item.name}
               </Link>
             ))}
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <button
-              onClick={() => setLanguage(language === "es" ? "en" : "es")}
-              className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded px-2 py-1"
-              aria-label={`Cambiar idioma a ${language === "es" ? "inglés" : "español"}`}
-            >
-              <Globe className="w-4 h-4" aria-hidden="true" />
-              <span>{language.toUpperCase()}</span>
-            </button>
-            <Link
-              href="/login"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-            >
-              {t("nav_login")}
-            </Link>
+            {/* Botón de idioma y login eliminados por falta de contexto */}
           </div>
 
           <button
@@ -142,6 +131,7 @@ export default function AccessibleHeader() {
                   onClick={() => setIsOpen(false)}
                   aria-current={isActive(item.href) ? "page" : undefined}
                 >
+                  {item.icon ? <item.icon className="inline w-5 h-5 mr-1 align-text-bottom" aria-hidden="true" /> : null}
                   {item.name}
                 </Link>
               ))}
@@ -150,7 +140,7 @@ export default function AccessibleHeader() {
                 className="text-cyan-400 hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded px-2 py-1"
                 onClick={() => setIsOpen(false)}
               >
-                {t("nav_login")}
+                Login
               </Link>
             </nav>
           </div>
