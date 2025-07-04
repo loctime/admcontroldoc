@@ -32,10 +32,10 @@ const navigationItems = [
     title: "Beneficios",
     icon: TrendingUp,
     items: [
-      { title: "Ahorro de Costos", href: "/clientes/beneficios/costos" },
-      { title: "Eficiencia Operativa", href: "/clientes/beneficios/eficiencia" },
-      { title: "Cumplimiento Legal", href: "/clientes/beneficios/cumplimiento" },
-      { title: "Escalabilidad", href: "/clientes/beneficios/escalabilidad" },
+      { title: "Ahorro de Costos", href: "/wiki/costos" },
+      { title: "Eficiencia Operativa", href: "/wiki/eficiencia" },
+      { title: "Cumplimiento Legal", href: "/wiki/cumplimiento" },
+      { title: "Escalabilidad", href: "/wiki/escalabilidad" },
     ],
   },
   {
