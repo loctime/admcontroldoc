@@ -17,7 +17,7 @@ export default function AccessibleHeader() {
     { name: "Precios", href: "/precios" },
     { name: "Clientes", href: "/clientes" },
     { name: "Contacto", href: "/contacto" },
-    { name: "Wiki", href: "/wiki/panel-usuario", icon: BookOpen },
+    { name: "Wiki", href: "/wiki/inicio", icon: BookOpen },
   ]
 
   const isActive = (path: string) => pathname === path;

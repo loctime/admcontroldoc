@@ -15,7 +15,7 @@ export default function Header() {
     { name: "Inicio", href: "/" },
     { name: "Funcionalidades", href: "/funcionalidades" },
     { name: "Contacto", href: "/contacto" },
-    { name: "Wiki", href: "/wiki/arquitectura", icon: BookOpen },
+    { name: "Wiki", href: "/wiki/inicio", icon: BookOpen },
   ]
 
   return (

@@ -25,7 +25,7 @@ import {
 const navigationItems = [
   {
     title: "Inicio",
-    href: "/clientes",
+    href: "/wiki/inicio",
     icon: Home,
   },
   {
