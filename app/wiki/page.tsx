@@ -1,178 +1,124 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+"use client"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
-import {
-  Building2,
-  Users,
-  FileText,
-  Shield,
-  Clock,
-  TrendingUp,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Zap,
-  Globe,
-  Award,
-} from "lucide-react"
+import { useRouter } from "next/navigation"
+import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import ThemeSwitcher from "@/components/ThemeSwitcher"
+import {
+  Home, TrendingUp, Award, Smile, ArrowRight, HelpCircle,
+  ShieldCheck, Clock, Layers, FileCheck, BarChart, DatabaseBackup,
+  Upload, Cloud, FileText, Search, Eye, Shield, FileCheck2, Settings2,
+  MousePointerClick, Gauge, LayoutDashboard, CheckCircle, Users, Globe,
+  ChevronDown, ChevronUp
+} from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
-const beneficios = [
-  {
-    title: "Ahorro de Tiempo",
-    description: "Reduce hasta 80% el tiempo en gestión documental",
-    icon: Clock,
-    color: "text-green-600",
-    bgColor: "bg-green-50",
-  },
-  {
-    title: "Cumplimiento Legal",
-    description: "Mantén todos tus documentos organizados y actualizados",
-    icon: Shield,
-    color: "text-blue-600",
-    bgColor: "bg-blue-50",
-  },
-  {
-    title: "Crecimiento Empresarial",
-    description: "Escala tu negocio sin preocuparte por la documentación",
-    icon: TrendingUp,
-    color: "text-purple-600",
-    bgColor: "bg-purple-50",
-  },
-  {
-    title: "Acceso Inmediato",
-    description: "Encuentra cualquier documento en segundos",
-    icon: Zap,
-    color: "text-orange-600",
-    bgColor: "bg-orange-50",
-  },
-]
+export default function WikiInicio() {
+  const router = useRouter()
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)
 
-const industrias = [
-  { name: "Transporte y Logística", docs: "Licencias, SOAT, Revisiones Técnicas", icon: "🚛" },
-  { name: "Construcción", docs: "Permisos, Certificaciones, Contratos", icon: "🏗️" },
-  { name: "Servicios Profesionales", docs: "Contratos, Facturas, Certificados", icon: "💼" },
-  { name: "Comercio", docs: "RUC, Permisos, Documentos Fiscales", icon: "🏪" },
-  { name: "Manufactura", docs: "Certificaciones, Permisos Ambientales", icon: "🏭" },
-  { name: "Salud", docs: "Licencias Sanitarias, Certificaciones", icon: "🏥" },
-]
+  const handleSectionClick = (section: string) => {
+    setExpandedSection(expandedSection === section ? null : section)
+  }
 
-export default function ClientesHomePage() {
   return (
-    <div className="space-y-12">
+    <section className="flex flex-col items-center justify-center py-0 px-4 space-y-12">
+     
+
       {/* Hero Section */}
-      <div className="text-center space-y-6 py-12">
+      <div className="text-center space-y-6">
         <Badge className="mb-4 bg-blue-600 hover:bg-blue-700">
-          <Star className="w-4 h-4 mr-1" />
-          Solución Empresarial Líder
+          <Home className="w-4 h-4 mr-1" />
+          Wiki Documental
         </Badge>
         <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          Gestión Documental Inteligente
+          Bienvenido a la Wiki de Gestión Documental
         </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Transforma la manera en que tu empresa maneja documentos. Automatiza procesos, cumple regulaciones y enfócate
-          en hacer crecer tu negocio.
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Encuentra guías, recursos y toda la información necesaria para aprovechar al máximo nuestra plataforma.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700" asChild>
-            <Link href="/clientes/beneficios">
-              Descubre los Beneficios
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-          <Button size="lg" variant="outline" asChild>
-            <Link href="/clientes/casos-uso">Ver Casos de Uso</Link>
-          </Button>
-        </div>
       </div>
 
-      {/* Beneficios Principales */}
-      <div className="space-y-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4">¿Por qué elegir nuestro sistema?</h2>
-          <p className="text-gray-600 text-lg">Beneficios reales que impactan directamente en tu negocio</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {beneficios.map((beneficio) => {
-            const Icon = beneficio.icon
-            return (
-              <Card key={beneficio.title} className="hover:shadow-lg transition-shadow border-0 shadow-md">
-                <CardHeader className="text-center">
-                  <div
-                    className={`w-16 h-16 ${beneficio.bgColor} rounded-full flex items-center justify-center mx-auto mb-4`}
-                  >
-                    <Icon className={`h-8 w-8 ${beneficio.color}`} />
-                  </div>
-                  <CardTitle className="text-lg">{beneficio.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-center">{beneficio.description}</p>
-                </CardContent>
-              </Card>
-            )
-          })}
-        </div>
+      {/* Categorías */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+        <CategoryCard
+          icon={<TrendingUp className="h-8 w-8 text-blue-600" />}
+          title="Beneficios"
+          description="Descubre cómo tu empresa mejora la gestión documental."
+          onClick={() => handleSectionClick("beneficios")}
+          isExpanded={expandedSection === "beneficios"}
+        />
+        <CategoryCard
+          icon={<Award className="h-8 w-8 text-green-600" />}
+          title="Características"
+          description="Explora funcionalidades clave de la plataforma."
+          onClick={() => handleSectionClick("caracteristicas")}
+          isExpanded={expandedSection === "caracteristicas"}
+        />
+        <CategoryCard
+          icon={<Smile className="h-8 w-8 text-indigo-600" />}
+          title="Facilidad de Uso"
+          description="Interfaz sencilla e intuitiva para todos los usuarios."
+          onClick={() => handleSectionClick("facilidad")}
+          isExpanded={expandedSection === "facilidad"}
+        />
       </div>
 
-      {/* Industrias */}
-      <Card className="bg-white/70 backdrop-blur-sm border-0 shadow-lg">
-        <CardHeader className="text-center">
-          <CardTitle className="text-2xl flex items-center justify-center space-x-2">
-            <Building2 className="h-6 w-6 text-blue-600" />
-            <span>Industrias que Confiamos</span>
-          </CardTitle>
-          <CardDescription className="text-lg">
-            Soluciones especializadas para diferentes sectores empresariales
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industrias.map((industria) => (
-              <div key={industria.name} className="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center space-x-3 mb-2">
-                  <span className="text-2xl">{industria.icon}</span>
-                  <h4 className="font-semibold">{industria.name}</h4>
-                </div>
-                <p className="text-sm text-gray-600">{industria.docs}</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      {/* Contenido expandible */}
+      {expandedSection === "beneficios" && (
+        <ExpandSection
+          title="Beneficios para tu Empresa"
+          description="Impacta directamente en tu negocio con estas ventajas:"
+          colorClass="from-cyan-600 to-blue-500 bg-blue-600 hover:bg-blue-700"
+          cards={[
+            { icon: <Clock className="text-green-600 w-8 h-8" />, title: "Ahorro de Tiempo", description: "Reduce hasta 80% el tiempo en gestión documental." },
+            { icon: <ShieldCheck className="text-blue-600 w-8 h-8" />, title: "Cumplimiento Legal", description: "Mantén tus documentos siempre actualizados." },
+            { icon: <TrendingUp className="text-purple-600 w-8 h-8" />, title: "Crecimiento Empresarial", description: "Escala tu negocio sin preocuparte por la documentación." },
+            { icon: <ArrowRight className="text-orange-600 w-8 h-8" />, title: "Acceso Inmediato", description: "Encuentra documentos en segundos." },
+          ]}
+        />
+      )}
 
-      {/* Estadísticas */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold mb-2">Resultados que Hablan por Sí Solos</h2>
-          <p className="text-blue-100">Empresas de todos los tamaños confían en nosotros</p>
-        </div>
+      {expandedSection === "caracteristicas" && (
+        <ExpandSection
+          title="Características Clave"
+          description="Potencia tu gestión documental con estas herramientas:"
+          colorClass="from-teal-600 to-green-500 bg-teal-600 hover:bg-teal-700"
+          cards={[
+            { icon: <Upload className="text-teal-600 w-8 h-8" />, title: "Subida Masiva", description: "Carga múltiples archivos simultáneamente." },
+            { icon: <FileText className="text-blue-600 w-8 h-8" />, title: "Conversión a PDF", description: "Convierte documentos automáticamente a PDF." },
+            { icon: <Layers className="text-yellow-600 w-8 h-8" />, title: "Control de Versiones", description: "Rastrea y restaura cambios." },
+            { icon: <BarChart className="text-orange-600 w-8 h-8" />, title: "Reportes Personalizados", description: "Gráficos e indicadores en tiempo real." },
+            { icon: <DatabaseBackup className="text-cyan-600 w-8 h-8" />, title: "Seguridad y Backups", description: "Almacenamiento seguro con copias automáticas." },
+          ]}
+        />
+      )}
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">500+</div>
-            <p className="text-blue-100">Empresas Activas</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">1M+</div>
-            <p className="text-blue-100">Documentos Procesados</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">80%</div>
-            <p className="text-blue-100">Reducción de Tiempo</p>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold mb-2">99.9%</div>
-            <p className="text-blue-100">Disponibilidad</p>
-          </div>
-        </div>
+      {expandedSection === "facilidad" && (
+        <ExpandSection
+          title="Facilidad de Uso"
+          description="Un sistema que cualquiera puede manejar rápidamente:"
+          colorClass="from-indigo-600 to-purple-500 bg-indigo-600 hover:bg-indigo-700"
+          cards={[
+            { icon: <MousePointerClick className="text-indigo-700 w-8 h-8" />, title: "Interfaz Intuitiva", description: "Diseñada para un uso simple y natural." },
+            { icon: <Smile className="text-cyan-700 w-8 h-8" />, title: "Experiencia Agradable", description: "Colores y diseño que facilitan el trabajo." },
+            { icon: <Gauge className="text-purple-700 w-8 h-8" />, title: "Velocidad de Uso", description: "Completa tareas con menos pasos." },
+            { icon: <LayoutDashboard className="text-indigo-600 w-8 h-8" />, title: "Dashboard Central", description: "Todo lo importante a la vista." },
+          ]}
+        />
+      )}
+
+      <div className="mt-10 text-gray-500 dark:text-gray-400 text-sm flex items-center gap-2 justify-center">
+        <HelpCircle className="h-4 w-4" />
+        ¿Dudas? Usa el buscador o revisa la sección de preguntas frecuentes.
       </div>
 
       {/* Características Principales */}
-      <div className="space-y-8">
+      <div className="space-y-8 w-full max-w-6xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Características que Marcan la Diferencia</h2>
-          <p className="text-gray-600 text-lg">Tecnología avanzada al servicio de tu empresa</p>
+          <p className="text-gray-600 dark:text-gray-300 text-lg">Tecnología avanzada al servicio de tu empresa</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -184,7 +130,7 @@ export default function ClientesHomePage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Convierte automáticamente documentos físicos en digitales con reconocimiento inteligente de texto.
               </p>
               <ul className="space-y-2">
@@ -212,7 +158,7 @@ export default function ClientesHomePage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Organiza a tu equipo con roles específicos y controla el acceso a documentos sensibles.
               </p>
               <ul className="space-y-2">
@@ -240,7 +186,7 @@ export default function ClientesHomePage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Accede a tus documentos desde cualquier dispositivo, en cualquier momento y lugar.
               </p>
               <ul className="space-y-2">
@@ -268,7 +214,7 @@ export default function ClientesHomePage() {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Mantén tu empresa siempre en regla con alertas automáticas y recordatorios inteligentes.
               </p>
               <ul className="space-y-2">
@@ -291,8 +237,8 @@ export default function ClientesHomePage() {
       </div>
 
       {/* Call to Action */}
-      <Card className="bg-gradient-to-r from-green-500 to-blue-600 text-white border-0">
-        <CardContent className="text-center py-12">
+      <Card className="bg-gradient-to-r from-green-500 to-blue-600 text-white border-0 w-full max-w-6xl">
+        <CardContent className="text-center py-8">
           <h2 className="text-3xl font-bold mb-4">¿Listo para Transformar tu Empresa?</h2>
           <p className="text-xl mb-8 text-green-50">
             Únete a cientos de empresas que ya optimizaron su gestión documental
@@ -312,6 +258,69 @@ export default function ClientesHomePage() {
           </div>
         </CardContent>
       </Card>
+    </section>
+  )
+}
+
+function CategoryCard({ icon, title, description, onClick, isExpanded }: { 
+  icon: React.ReactNode; 
+  title: string; 
+  description: string; 
+  onClick: () => void; 
+  isExpanded?: boolean; 
+}) {
+  return (
+    <button
+      className={`flex flex-col items-center p-6 rounded-lg shadow hover:shadow-md transition border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-400 relative w-full`}
+      onClick={onClick}
+    >
+      {icon}
+      <span className="mt-3 text-lg font-semibold">{title}</span>
+      <span className="mt-1 text-gray-600 text-sm">{description}</span>
+      <div className="absolute top-2 right-2">
+        {isExpanded ? (
+          <ChevronUp className="h-4 w-4 text-gray-500" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-gray-500" />
+        )}
+      </div>
+    </button>
+  )
+}
+
+function ExpandSection({ title, description, cards, colorClass }: { 
+  title: string; 
+  description: string; 
+  cards: { icon: React.ReactNode; title: string; description: string }[];
+  colorClass: string;
+}) {
+  return (
+    <div className="w-full max-w-6xl animate-in slide-in-from-top-2 duration-300 space-y-8">
+      <div className={`bg-gradient-to-r rounded-2xl p-8 text-white shadow-md text-center mb-8 ${colorClass.split(' ').slice(0,2).join(' ')}`}>
+        <h2 className="text-3xl font-bold mb-4">{title}</h2>
+        <p className="text-lg max-w-3xl mx-auto">{description}</p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cards.map((card) => (
+          <ServiceCard key={card.title} icon={card.icon} title={card.title} description={card.description} />
+        ))}
+      </div>
+      <div className="rounded-2xl p-8 text-center shadow mt-8 bg-gray-100 dark:bg-gray-900/80">
+        <h3 className="text-2xl font-bold mb-2">¿Listo para comenzar?</h3>
+        <p className="text-gray-700 dark:text-gray-200 mb-4">Empieza a gestionar tus documentos de forma ágil, segura y sencilla.</p>
+        <button className={`text-white font-semibold py-3 px-6 rounded-lg transition ${colorClass.split(' ').slice(2).join(' ')}`}>
+          Solicitar demo gratuita
+        </button>
+      </div>
     </div>
+  )
+}
+
+function ServiceCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
+  return (
+    <Card className="shadow hover:shadow-lg transition">
+      <CardHeader className="flex items-center gap-3">{icon}<CardTitle className="text-xl font-bold">{title}</CardTitle></CardHeader>
+      <CardContent><p className="text-gray-900 dark:text-white">{description}</p></CardContent>
+    </Card>
   )
 }

@@ -7,7 +7,7 @@ import { Building2, Phone, Mail, ExternalLink } from "lucide-react"
 
 export default function ClientHeader() {
   return (
-    <header className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <header className="backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/clientes" className="flex items-center space-x-2">

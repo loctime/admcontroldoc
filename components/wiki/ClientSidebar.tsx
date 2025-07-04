@@ -108,7 +108,7 @@ export default function ClientSidebar() {
   })
 
   return (
-    <div className="w-80 bg-white/80 backdrop-blur-sm border-r border-gray-200 h-[calc(100vh-4rem)] shadow-lg">
+    <div className="w-80 backdrop-blur-sm border-r border-gray-200 h-[calc(100vh-4rem)] shadow-lg">
       <div className="p-4 border-b border-gray-200">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -116,7 +116,7 @@ export default function ClientSidebar() {
             placeholder="Buscar información..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10 bg-white/70"
+            className="pl-10"
           />
         </div>
       </div>
