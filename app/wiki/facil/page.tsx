@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import { MousePointerClick, Smile, Speedometer, LayoutDashboard } from "lucide-react"
+import { MousePointerClick, Smile, Gauge, LayoutDashboard } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function FacilidadDeUsoPage() {
@@ -47,7 +47,7 @@ export default function FacilidadDeUsoPage() {
             <p className="text-gray-700">Colores, tipografías y elementos cuidadosamente elegidos para que trabajar sea cómodo y claro.</p>
           </div>
           <div className="bg-gradient-to-br from-purple-100 to-purple-50 rounded-xl p-6 text-center shadow">
-            <Speedometer className="mx-auto text-purple-700 w-10 h-10 mb-2" />
+            <Gauge className="mx-auto text-purple-700 w-10 h-10 mb-2" />
             <h3 className="text-xl font-bold text-purple-700">Velocidad de uso</h3>
             <p className="text-gray-700">Procesos optimizados para completar tareas en menos tiempo y con menos pasos.</p>
           </div>
