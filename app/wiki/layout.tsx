@@ -14,7 +14,7 @@ export default function ClientLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-16">
       <ClientHeader />
       <div className="flex">
         <ClientSidebar />

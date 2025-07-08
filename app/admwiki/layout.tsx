@@ -14,7 +14,7 @@ export default function WikiLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pt-16">
       <WikiHeader />
       <div className="flex">
         <WikiSidebar />

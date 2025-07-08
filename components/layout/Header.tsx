@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, FileText, BookOpen } from "lucide-react"
+import { Menu, X, FileText } from "lucide-react"
 import ThemeSwitcher from "../ThemeSwitcher"
 
 export default function Header() {
@@ -15,7 +15,6 @@ export default function Header() {
     { name: "Inicio", href: "/" },
     { name: "Funcionalidades", href: "/funcionalidades" },
     { name: "Contacto", href: "/contacto" },
-    { name: "Wiki", href: "/wiki/inicio", icon: BookOpen },
   ]
 
   return (
@@ -42,7 +41,6 @@ export default function Header() {
                     : "text-muted-foreground hover:text-primary"}
                 `}
               >
-                {item.icon ? <item.icon className="inline w-5 h-5 mr-1 align-text-bottom" aria-hidden="true" /> : null}
                 {item.name}
               </Link>
             ))}
@@ -80,7 +78,6 @@ export default function Header() {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.icon ? <item.icon className="inline w-5 h-5 mr-1 align-text-bottom" aria-hidden="true" /> : null}
                   {item.name}
                 </Link>
               ))}

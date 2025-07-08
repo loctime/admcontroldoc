@@ -7,7 +7,7 @@ export default function Footer() {
 
   const navigation = {
     product: [
-      { name: "Unir PDF automáticamente", href: "/unir-pdf" }, // SEO first
+      { name: "Convertir a PDF", href: "/funcionalidades" }, // SEO first
       { name: "Funcionalidades", href: "/funcionalidades" },
       { name: "Demo", href: "/contacto" },
     ],

@@ -16,7 +16,7 @@ export default function ContactoPage() {
           Contacto
         </h1>
         <p className="text-muted-foreground text-lg">
-          ¿Tienes preguntas, sugerencias o quieres conocer más sobre ControlDoc? Completa el formulario y nuestro equipo
+          ¿Tienes preguntas, sugerencias o quieres conocer más sobre ControlDoc? Contáctanos directamente y nuestro equipo
           te responderá a la brevedad.
         </p>
       </div>
