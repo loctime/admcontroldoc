@@ -62,9 +62,7 @@ export default function Hero() {
             Contactar
             <ArrowRight className="inline ml-2 w-5 h-5 align-middle" />
           </a>
-          <button className={`border ${colors.title === 'text-white' ? 'border-white text-white hover:bg-white hover:text-blue-900' : 'border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white'} font-semibold py-2 px-6 rounded transition`}>
-            Ver Demo
-          </button>
+          
         </div>
       </div>
 
