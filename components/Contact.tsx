@@ -7,7 +7,7 @@ import { Mail, Phone, MapPin, MessageCircle, Facebook, Instagram } from "lucide-
 export default function Contact() {
   const { theme } = useTheme()
 
-  // Colores dinámicos según tema
+  // Colores dinámicos según tema (sin hydration mismatch)
   const getColors = () => {
     return theme === 'dark' ? {
       title: "text-white",
@@ -20,7 +20,11 @@ export default function Contact() {
     }
   }
 
-  const colors = getColors()
+  const colors = typeof window === 'undefined' ? {
+    title: "text-gray-900",
+    subtitle: "text-gray-700",
+    text: "text-gray-600",
+  } : getColors();
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-transparent">
@@ -33,7 +37,8 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto">
           <div className="space-y-8">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+              {/* Email */}
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -47,21 +52,25 @@ export default function Contact() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Phone className="w-6 h-6 text-white" />
+              {/* Teléfono (WhatsApp) */}
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className={`font-semibold ${colors.title}`}>Teléfono</h3>
+                <h3 className={`font-semibold ${colors.title}`}>WhatsApp</h3>
                 <a 
-                  href="tel:+5492944921510" 
-                  className={`${colors.text} hover:text-cyan-500 transition-colors`}
+                  href="https://wa.me/5492944921510" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${colors.text} hover:text-green-500 transition-colors`}
                 >
                   +54 9 294 492-1510
                 </a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+              {/* Ubicación */}
+              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -71,10 +80,11 @@ export default function Contact() {
             </div>
 
             {/* Botones de redes sociales */}
+            {/*
             <div className="pt-4">
               <h3 className={`font-semibold mb-4 ${colors.title}`}>Síguenos en redes sociales</h3>
               <div className="flex space-x-4">
-                {/* WhatsApp */}
+                {/* WhatsApp 
                 <a
                   href="https://wa.me/5492944921510"
                   target="_blank"
@@ -85,7 +95,7 @@ export default function Contact() {
                   <MessageCircle className="w-6 h-6 text-white" />
                 </a>
 
-                {/* Facebook */}
+                {/* Facebook 
                 <a
                   href="https://facebook.com/controldoc"
                   target="_blank"
@@ -96,7 +106,7 @@ export default function Contact() {
                   <Facebook className="w-6 h-6 text-white" />
                 </a>
 
-                {/* Instagram */}
+                {/* Instagram 
                 <a
                   href="https://instagram.com/controldoc"
                   target="_blank"
@@ -108,6 +118,7 @@ export default function Contact() {
                 </a>
               </div>
             </div>
+            */}
           </div>
         </div>
       </div>

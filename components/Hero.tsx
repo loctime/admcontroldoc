@@ -14,13 +14,10 @@ export default function Hero() {
     setMounted(true)
   }, [])
 
-  // Imagen dinámica según tema
-  const getHeroImage = () => {
-    if (!mounted) return "/images/morochar.png"
-    return theme === 'dark' ? "/images/rubior.png" : "/images/morochar.png"
-  }
+  // Imagen dinámica según tema (sin hydration mismatch)
+  const heroImage = mounted && theme === 'dark' ? "/images/rubior.png" : "/images/morochar.png";
 
-  // Colores dinámicos según tema
+  // Colores dinámicos según tema (sin hydration mismatch)
   const getTextColors = () => {
     if (!mounted) return {
       title: "text-white",
@@ -42,15 +39,27 @@ export default function Hero() {
     }
   }
 
-  const colors = getTextColors()
+  const colors = mounted ? getTextColors() : {
+    title: "text-gray-900",
+    subtitle: "text-gray-700",
+    body: "text-gray-600",
+    link: "text-blue-600"
+  };
 
   return (
     <section className="flex flex-col items-center text-center py-12 px-4 bg-transparent">
       {/* Bloque superior centrado */}
-      <div className="max-w-3xl w-full pt-12">
-        <h1 className={`text-4xl md:text-5xl font-bold mb-4 ${colors.title}`}>Control Documental Total</h1>
+      <div className="max-w-3xl w-full pt-1">
+        <Image
+          src="/logos/controldoc-logo.png"
+          alt="Logo ControlDoc"
+          width={256}
+          height={256}
+          className="mx-auto w-64 h-auto mb-2"
+          priority
+        />
         <p className={`text-lg mb-6 ${colors.subtitle}`}>
-          ControlDoc te ayuda a gestionar y auditar todos los documentos con trazabilidad completa y alertas automáticas.
+          Gestiona y auditar todos los documentos con trazabilidad completa y alertas automáticas.
         </p>
         <div className="flex justify-center gap-4 flex-wrap mb-2">
           <a
@@ -62,9 +71,6 @@ export default function Hero() {
             Contactar
             <ArrowRight className="inline ml-2 w-5 h-5 align-middle" />
           </a>
-          <button className={`border ${colors.title === 'text-white' ? 'border-white text-white hover:bg-white hover:text-blue-900' : 'border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white'} font-semibold py-2 px-6 rounded transition`}>
-            Ver Demo
-          </button>
         </div>
       </div>
 
@@ -91,7 +97,7 @@ export default function Hero() {
         {/* Imagen y carrusel derecho */}
         <div className="flex-1 flex flex-col items-center relative">
           <Image
-            src={getHeroImage()}
+            src={heroImage}
             alt={mounted && theme === 'dark' ? "Hombre usando ControlDoc en modo oscuro" : "Hombre usando ControlDoc en modo claro"}
             width={420}
             height={420}
