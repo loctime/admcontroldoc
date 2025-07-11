@@ -6,7 +6,7 @@ export default function GlobalLogo() {
   const pathname = usePathname()
   if (pathname === "/") return null
   return (
-    <div className="w-full flex justify-center py-6">
+    <div className="w-full flex justify-center py-1 mt-20">
       <Image
         src="/logos/controldoclogo.png"
         alt="Logo ControlDoc"
