@@ -1,15 +1,30 @@
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
 import { Check, ChevronRight } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
-import { AppMediaGallery } from "@/components/app-media-gallery"
 import { getPlatformAppBySlug } from "@/lib/platform-data"
 import { getAppSchemas } from "@/lib/seo"
+
+const AppMediaGallery = dynamic(
+  () => import("@/components/app-media-gallery").then((mod) => mod.AppMediaGallery),
+  {
+    loading: () => (
+      <div
+        className="h-[32rem] rounded-3xl bg-slate-100 animate-pulse"
+        aria-hidden="true"
+      />
+    ),
+  }
+)
 
 export function ControlDocLanding() {
   const app = getPlatformAppBySlug("control-doc")
   if (!app) return null
   const { landingContent } = app
+  const hasPublishedMedia = landingContent.mediaGallery?.items.some(
+    (item) => item.web.src || item.mobile.src
+  )
 
   return (
     <>
@@ -69,6 +84,8 @@ export function ControlDocLanding() {
                   alt={`${app.name} - ${app.seo.categoryLabel}`}
                   fill
                   className="object-cover"
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               {landingContent.heroStats && (
@@ -127,7 +144,7 @@ export function ControlDocLanding() {
         </div>
       </section>
 
-      <section className="bg-white py-20 border-b border-slate-100">
+      <section className="bg-white py-20 border-b border-slate-100 content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Funcionalidades clave</h2>
@@ -154,15 +171,15 @@ export function ControlDocLanding() {
         </div>
       </section>
 
-      {landingContent.mediaGallery && (
-        <section className="bg-slate-50 py-20 border-b border-slate-100">
+      {landingContent.mediaGallery && hasPublishedMedia && (
+        <section className="bg-slate-50 py-20 border-b border-slate-100 content-auto">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <AppMediaGallery items={landingContent.mediaGallery.items} appColor="from-blue-600 to-blue-600" />
           </div>
         </section>
       )}
 
-      <section className="bg-white py-20 border-b border-slate-100">
+      <section className="bg-white py-20 border-b border-slate-100 content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Por que elegir {app.name}?</h2>
@@ -184,7 +201,7 @@ export function ControlDocLanding() {
       </section>
 
       {landingContent.platformIntegration && (
-        <section className="bg-slate-50 py-20 border-b border-slate-100">
+        <section className="bg-slate-50 py-20 border-b border-slate-100 content-auto">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white border border-blue-100 rounded-[28px] p-10 shadow-[0_22px_60px_-28px_rgba(37,99,235,0.28)]">
               <span className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4 block">
@@ -212,7 +229,7 @@ export function ControlDocLanding() {
         </section>
       )}
 
-      <section className="bg-white py-20 border-b border-slate-100">
+      <section className="bg-white py-20 border-b border-slate-100 content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Casos de uso</h2>
@@ -234,7 +251,7 @@ export function ControlDocLanding() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-20 border-b border-slate-100">
+      <section className="bg-slate-50 py-20 border-b border-slate-100 content-auto">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Preguntas frecuentes</h2>
@@ -253,7 +270,7 @@ export function ControlDocLanding() {
         </div>
       </section>
 
-      <section className="bg-slate-900 py-20">
+      <section className="bg-slate-900 py-20 content-auto">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Listo para empezar con {app.name}

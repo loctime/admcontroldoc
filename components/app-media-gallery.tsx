@@ -10,6 +10,10 @@ interface AppMediaGalleryProps {
   appColor: string
 }
 
+function hasMedia(side: MediaSide) {
+  return Boolean(side.src)
+}
+
 function getYouTubeId(url: string): string | null {
   const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([A-Za-z0-9_-]{11})/)
   return match ? match[1] : null
@@ -39,10 +43,12 @@ function MediaContent({ side, label }: { side: MediaSide; label: string }) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           className="w-full h-full"
+          loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
         />
       )
     }
-    return <video src={side.src} controls className="w-full h-full object-cover" />
+    return <video src={side.src} controls preload="metadata" className="w-full h-full object-cover" />
   }
 
   return (
@@ -51,6 +57,7 @@ function MediaContent({ side, label }: { side: MediaSide; label: string }) {
       alt={label}
       fill
       className="object-cover object-top"
+      sizes="(max-width: 1024px) 100vw, 66vw"
     />
   )
 }
@@ -125,7 +132,13 @@ function Thumbnail({
         }`}
       >
         {item.web.src ? (
-          <Image src={item.web.src} alt={item.caption} fill className="object-cover object-top" />
+          <Image
+            src={item.web.src}
+            alt={item.caption}
+            fill
+            className="object-cover object-top"
+            sizes="96px"
+          />
         ) : (
           <div className="w-full h-full bg-slate-100 flex items-center justify-center">
             {item.web.type === "video" ? (
@@ -144,14 +157,15 @@ function Thumbnail({
 }
 
 export function AppMediaGallery({ items, appColor }: AppMediaGalleryProps) {
+  const publishedItems = items.filter((item) => hasMedia(item.web) || hasMedia(item.mobile))
   const [selected, setSelected] = useState(0)
 
-  if (!items.length) return null
+  if (!publishedItems.length) return null
 
-  const current = items[selected]
+  const current = publishedItems[selected]
 
-  const prev = () => setSelected((i) => (i - 1 + items.length) % items.length)
-  const next = () => setSelected((i) => (i + 1) % items.length)
+  const prev = () => setSelected((i) => (i - 1 + publishedItems.length) % publishedItems.length)
+  const next = () => setSelected((i) => (i + 1) % publishedItems.length)
 
   return (
     <section className="mb-20">
@@ -209,7 +223,7 @@ export function AppMediaGallery({ items, appColor }: AppMediaGalleryProps) {
 
       {/* Thumbnail strip */}
       <div className="flex gap-3 overflow-x-auto pb-2 px-1 scrollbar-hide">
-        {items.map((item, i) => (
+        {publishedItems.map((item, i) => (
           <Thumbnail
             key={i}
             item={item}

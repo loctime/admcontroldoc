@@ -134,3 +134,8 @@ html {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 960px;
+}

@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   darkMode: ["class"],
@@ -82,20 +82,9 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      // ✅ Soporte para text-shadow (con plugin)
-      textShadow: {
-        sm: "0 1px 2px rgba(0,0,0,0.5)",
-        DEFAULT: "0 2px 4px rgba(0,0,0,0.6)",
-        lg: "0 4px 6px rgba(0,0,0,0.7)",
-        white: "0 2px 4px rgba(255,255,255,0.8)",
-        blue: "0 2px 6px rgba(68,114,202,0.5)", // sombra azul suave
-      },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("tailwindcss-textshadow"), // 👈 agregalo con: npm i tailwindcss-textshadow
-  ],
-};
+  plugins: [require("tailwindcss-animate")],
+}
 
-export default config;
+export default config
