@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Check, FolderOpen } from "lucide-react"
+import { Check, ChevronRight } from "lucide-react"
 import { StructuredData } from "@/components/structured-data"
 import { AppMediaGallery } from "@/components/app-media-gallery"
 import { getPlatformAppBySlug } from "@/lib/platform-data"
@@ -8,34 +8,38 @@ import { getAppSchemas } from "@/lib/seo"
 
 export function ControlDocLanding() {
   const app = getPlatformAppBySlug("control-doc")
-
   if (!app) return null
-
   const { landingContent } = app
 
   return (
     <>
       <StructuredData data={getAppSchemas(app)} />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
 
-          {/* Hero */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+      {/* Hero */}
+      <section className="bg-white pt-28 pb-20 border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                <app.icon size={16} />
+              <div className="inline-flex items-center gap-2 text-blue-600 text-sm font-semibold mb-6 border border-blue-200 bg-blue-50 px-3 py-1.5 rounded-full">
+                <app.icon size={14} />
                 {landingContent.heroLabel}
               </div>
 
-              <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">{landingContent.heroTitle}</h1>
+              <h1 className="text-5xl font-bold text-slate-900 mb-5 leading-tight tracking-tight">
+                {landingContent.heroTitle}
+              </h1>
 
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">{landingContent.heroDescription}</p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">{landingContent.valueProposition}</p>
+              <p className="text-lg text-slate-600 mb-4 leading-relaxed">
+                {landingContent.heroDescription}
+              </p>
+              <p className="text-base text-slate-500 mb-10 leading-relaxed">
+                {landingContent.valueProposition}
+              </p>
 
-              <div className="flex flex-wrap gap-4 mb-10">
+              <div className="flex flex-wrap gap-3 mb-12">
                 <Link
                   href="#funcionalidades"
-                  className={`bg-gradient-to-r ${app.color} text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105`}
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
                 >
                   {landingContent.finalCta.primaryLabel}
                 </Link>
@@ -43,194 +47,233 @@ export function ControlDocLanding() {
                   href={landingContent.finalCta.secondaryHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105"
+                  className="border border-slate-300 text-slate-700 px-6 py-3 rounded-lg text-sm font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
                 >
                   {landingContent.finalCta.secondaryLabel}
                 </Link>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <ul className="grid sm:grid-cols-2 gap-3">
                 {app.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3 rounded-2xl bg-white border border-blue-100 p-4 shadow-sm">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="font-medium text-gray-700">{feature}</span>
-                  </div>
+                  <li key={feature} className="flex items-start gap-2.5 text-sm text-slate-700">
+                    <Check className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                    {feature}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
 
             <div className="relative">
-              <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white/70">
+              <div className="relative h-80 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
                 <Image
                   src={app.image}
                   alt={`${app.name} — ${app.seo.categoryLabel}`}
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               </div>
-              {landingContent.heroStats ? (
-                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-blue-100">
-                  <div className={`text-3xl font-bold bg-gradient-to-r ${app.color} bg-clip-text text-transparent`}>
-                    {landingContent.heroStats.value}
-                  </div>
-                  <div className="text-sm text-gray-600 max-w-[12rem]">{landingContent.heroStats.label}</div>
+              {landingContent.heroStats && (
+                <div className="absolute -bottom-5 -right-4 bg-white border border-slate-200 px-5 py-4 rounded-xl shadow-md">
+                  <div className="text-2xl font-bold text-blue-600">{landingContent.heroStats.value}</div>
+                  <div className="text-xs text-slate-500 max-w-[10rem] leading-snug">{landingContent.heroStats.label}</div>
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Problemas y audiencias */}
-          <section id="funcionalidades" className="mb-20">
-            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-start">
-              <div className="rounded-3xl bg-white border border-slate-200 p-8 shadow-sm">
-                <h2 className="text-3xl font-bold text-gray-900 mb-5">Que problemas resuelve {app.name}?</h2>
-                <ul className="space-y-4">
-                  {landingContent.problems.map((problem) => (
-                    <li key={problem} className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-gray-700 leading-relaxed">
-                      {problem}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <aside className="rounded-3xl bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white p-8 shadow-2xl">
-                <h2 className="text-3xl font-bold mb-5">Para que empresas sirve?</h2>
-                <div className="space-y-4">
-                  {landingContent.audiences.map((audience) => (
-                    <div key={audience.title} className="rounded-2xl bg-white/10 border border-white/10 p-5">
-                      <h3 className="text-xl font-semibold mb-2">{audience.title}</h3>
-                      <p className="text-blue-50/90 leading-relaxed">{audience.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </aside>
+      {/* Problemas y audiencias */}
+      <section id="funcionalidades" className="bg-slate-50 py-20 border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="bg-white border border-slate-200 rounded-xl p-8">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                ¿Qué problemas resuelve {app.name}?
+              </h2>
+              <ul className="space-y-3">
+                {landingContent.problems.map((problem) => (
+                  <li key={problem} className="flex items-start gap-3 text-slate-600 text-sm leading-relaxed">
+                    <ChevronRight className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                    {problem}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </section>
 
-          {/* Integración ecosistema */}
-          {landingContent.platformIntegration ? (
-            <section className="mb-20 rounded-3xl bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white p-10 shadow-2xl">
-              <div className="max-w-4xl">
-                <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm font-semibold mb-5">
-                  <FolderOpen size={16} />
-                  Integracion con la plataforma
-                </div>
-                <h2 className="text-4xl font-bold mb-4">{landingContent.platformIntegration.title}</h2>
-                <p className="text-lg text-blue-100/90 mb-8 leading-relaxed">{landingContent.platformIntegration.description}</p>
-                <div className="grid md:grid-cols-3 gap-4">
-                  {landingContent.platformIntegration.bullets.map((bullet) => (
-                    <div key={bullet} className="rounded-2xl border border-white/10 bg-white/10 p-5">
-                      <p className="text-blue-50 leading-relaxed">{bullet}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
-          ) : null}
-
-          {/* Funcionalidades */}
-          <section className="mb-20">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Funcionalidades clave</h2>
-            <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              {app.name} concentra todo lo que necesita tu equipo operativo en un solo sistema.
-            </p>
-            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-              {landingContent.functionalities.map((item) => (
-                <article key={item.title} className="bg-white p-7 rounded-3xl shadow-lg border border-blue-100">
-                  {item.icon ? (
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${app.color} flex items-center justify-center mb-5`}>
-                      <item.icon className="w-7 h-7 text-white" />
-                    </div>
-                  ) : null}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          {/* Galería */}
-          {landingContent.mediaGallery && (
-            <AppMediaGallery items={landingContent.mediaGallery.items} appColor={app.color} />
-          )}
-
-          {/* Beneficios */}
-          <section className="mb-20">
-            <div className={`rounded-3xl bg-gradient-to-br ${app.color} p-12 text-white`}>
-              <h2 className="text-4xl font-bold mb-8 text-center">Beneficios de usar {app.name}</h2>
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5 max-w-5xl mx-auto">
-                {landingContent.benefits.map((benefit) => (
-                  <div key={benefit} className="flex items-start gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-2xl">
-                    <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="font-medium">{benefit}</span>
+            <div className="bg-white border border-slate-200 rounded-xl p-8">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                ¿Para qué empresas?
+              </h2>
+              <div className="space-y-4">
+                {landingContent.audiences.map((audience) => (
+                  <div key={audience.title}>
+                    <h3 className="text-sm font-semibold text-slate-900 mb-1">{audience.title}</h3>
+                    <p className="text-sm text-slate-500 leading-relaxed">{audience.description}</p>
                   </div>
                 ))}
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          {/* Casos de uso */}
-          <section className="mb-20">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">Casos de uso</h2>
-            <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-              Ejemplos concretos de como {app.name} puede integrarse con procesos reales de negocio.
+      {/* Funcionalidades */}
+      <section className="bg-white py-20 border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Funcionalidades clave</h2>
+            <p className="text-slate-500 max-w-xl">
+              Todo lo que necesita tu equipo operativo, en un solo sistema.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {landingContent.useCases.map((useCase) => (
-                <article key={useCase.title} className="bg-white p-8 rounded-3xl shadow-lg border-l-4 border-blue-500">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">{useCase.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{useCase.description}</p>
-                </article>
-              ))}
-            </div>
-          </section>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {landingContent.functionalities.map((item) => (
+              <article
+                key={item.title}
+                className="bg-white border border-slate-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-sm transition-all"
+              >
+                {item.icon && (
+                  <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                    <item.icon className="w-4.5 h-4.5 text-blue-600" />
+                  </div>
+                )}
+                <h3 className="text-base font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          {/* FAQ */}
-          <section className="mb-20">
-            <div className="rounded-3xl border border-slate-200 bg-white p-10 shadow-sm">
-              <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Preguntas frecuentes sobre {app.name}</h2>
-              <div className="space-y-4">
-                {landingContent.faq.map((item) => (
-                  <article key={item.question} className="rounded-2xl bg-slate-50 border border-slate-200 p-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.question}</h3>
-                    <p className="text-gray-600 leading-relaxed">{item.answer}</p>
-                  </article>
+      {/* Galería */}
+      {landingContent.mediaGallery && (
+        <section className="bg-slate-50 py-20 border-b border-slate-100">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AppMediaGallery items={landingContent.mediaGallery.items} appColor="from-blue-600 to-blue-600" />
+          </div>
+        </section>
+      )}
+
+      {/* Beneficios */}
+      <section className="bg-white py-20 border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">¿Por qué elegir {app.name}?</h2>
+            <p className="text-slate-500 max-w-xl">
+              Diseñado para que el equipo trabaje con fluidez desde el primer día.
+            </p>
+          </div>
+          <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {landingContent.benefits.map((benefit) => (
+              <li key={benefit} className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed">
+                <span className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <Check className="w-3 h-3 text-white" />
+                </span>
+                {benefit}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Integración ecosistema */}
+      {landingContent.platformIntegration && (
+        <section className="bg-slate-50 py-20 border-b border-slate-100">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white border border-slate-200 rounded-xl p-10">
+              <span className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-4 block">
+                Integración con la plataforma
+              </span>
+              <h2 className="text-2xl font-bold text-slate-900 mb-3">
+                {landingContent.platformIntegration.title}
+              </h2>
+              <p className="text-slate-500 mb-8 max-w-2xl leading-relaxed">
+                {landingContent.platformIntegration.description}
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                {landingContent.platformIntegration.bullets.map((bullet) => (
+                  <div key={bullet} className="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
+                    <Check className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                    {bullet}
+                  </div>
                 ))}
               </div>
             </div>
-          </section>
+          </div>
+        </section>
+      )}
 
-          {/* CTA final */}
-          <section className="bg-gray-900 rounded-3xl p-12 text-center text-white">
-            <h2 className="text-4xl font-bold mb-4">Listo para empezar con {app.name}</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Modernizá el control de cumplimiento de tu empresa con una plataforma SaaS diseñada para operar con eficiencia y trazabilidad real.
+      {/* Casos de uso */}
+      <section className="bg-white py-20 border-b border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Casos de uso</h2>
+            <p className="text-slate-500 max-w-xl">
+              Cómo {app.name} encaja en procesos reales de negocio.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="#funcionalidades"
-                className={`bg-gradient-to-r ${app.color} text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-lg hover:scale-105`}
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {landingContent.useCases.map((useCase) => (
+              <article
+                key={useCase.title}
+                className="bg-white border border-slate-200 rounded-xl p-6 border-l-2 border-l-blue-600"
               >
-                {landingContent.finalCta.primaryLabel}
-              </Link>
-              <Link
-                href={landingContent.finalCta.secondaryHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-white text-gray-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
-              >
-                {landingContent.finalCta.secondaryLabel}
-              </Link>
-            </div>
-          </section>
-
+                <h3 className="text-base font-semibold text-slate-900 mb-2">{useCase.title}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{useCase.description}</p>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-slate-50 py-20 border-b border-slate-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Preguntas frecuentes</h2>
+          </div>
+          <div className="space-y-4">
+            {landingContent.faq.map((item) => (
+              <article
+                key={item.question}
+                className="bg-white border border-slate-200 rounded-xl p-6"
+              >
+                <h3 className="text-base font-semibold text-slate-900 mb-2">{item.question}</h3>
+                <p className="text-sm text-slate-500 leading-relaxed">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="bg-slate-900 py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Listo para empezar con {app.name}
+          </h2>
+          <p className="text-slate-400 mb-8 leading-relaxed">
+            Modernizá el control de cumplimiento de tu empresa con una plataforma diseñada para operar con eficiencia y trazabilidad real.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="#funcionalidades"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-500 transition-colors"
+            >
+              {landingContent.finalCta.primaryLabel}
+            </Link>
+            <Link
+              href={landingContent.finalCta.secondaryHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-slate-700 text-slate-300 px-6 py-3 rounded-lg text-sm font-semibold hover:border-slate-500 hover:text-white transition-colors"
+            >
+              {landingContent.finalCta.secondaryLabel}
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   )
 }
