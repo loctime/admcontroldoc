@@ -108,7 +108,7 @@ export function ControlDocLanding() {
             <div className="relative overflow-hidden rounded-[28px] border border-blue-100 bg-white p-8 shadow-[0_22px_60px_-28px_rgba(37,99,235,0.32)]">
               <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400" />
               <h2 className="text-2xl font-bold text-slate-950 mb-6">
-                Que problemas resuelve {app.name}?
+                ¿Qué problemas resuelve el control documental?
               </h2>
               <ul className="space-y-4">
                 {landingContent.problems.map((problem) => (
@@ -127,7 +127,7 @@ export function ControlDocLanding() {
 
             <div className="relative overflow-hidden rounded-[28px] border border-blue-100 bg-white p-8 shadow-[0_22px_60px_-28px_rgba(37,99,235,0.32)]">
               <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-700 via-blue-500 to-cyan-400" />
-              <h2 className="text-2xl font-bold text-slate-950 mb-6">Para que empresas?</h2>
+              <h2 className="text-2xl font-bold text-slate-950 mb-6">¿Para qué empresas es ControlDoc?</h2>
               <div className="space-y-4">
                 {landingContent.audiences.map((audience) => (
                   <div
@@ -147,7 +147,7 @@ export function ControlDocLanding() {
       <section className="bg-white py-20 border-b border-slate-100 content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">Funcionalidades clave</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Funcionalidades del software de gestión documental</h2>
             <p className="text-slate-600 max-w-xl">
               Todo lo que necesita tu equipo operativo, en un solo sistema.
             </p>
@@ -182,7 +182,7 @@ export function ControlDocLanding() {
       <section className="bg-white py-20 border-b border-slate-100 content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">Por que elegir {app.name}?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">¿Por qué elegir {app.name} como software de control documental?</h2>
             <p className="text-slate-600 max-w-xl">
               Disenado para que el equipo trabaje con fluidez desde el primer dia.
             </p>
@@ -232,7 +232,7 @@ export function ControlDocLanding() {
       <section className="bg-white py-20 border-b border-slate-100 content-auto">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-3">Casos de uso</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Casos de uso del control documental</h2>
             <p className="text-slate-600 max-w-xl">
               Como {app.name} encaja en procesos reales de negocio.
             </p>
