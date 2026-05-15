@@ -100,6 +100,26 @@ export function getAppSchemas(app: PlatformApp) {
           "https://controlfile.app",
         ],
         foundingDate: "2024",
+        email: "soporte@controldoc.app",
+        telephone: "+54 9 336 434-5088",
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            email: "soporte@controldoc.app",
+            telephone: "+54 9 336 434-5088",
+            areaServed: ["AR", "MX", "CL", "CO", "PE", "UY"],
+            availableLanguage: ["Spanish", "es"],
+          },
+          {
+            "@type": "ContactPoint",
+            contactType: "sales",
+            email: "soporte@controldoc.app",
+            telephone: "+54 9 336 434-5088",
+            areaServed: "Latinoamérica",
+            availableLanguage: ["Spanish", "es"],
+          },
+        ],
         areaServed: [
           "Argentina",
           "México",

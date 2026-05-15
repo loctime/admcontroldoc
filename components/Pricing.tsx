@@ -57,7 +57,7 @@ export default function Pricing() {
     const selectedAddonNames = selectedAddons.map((id) => addons.find((addon) => addon.id === id)?.name).join(", ")
     const message = `Hola, me interesa el Plan Básico ($${basePlan.price}/mes) con las siguientes mejoras: ${selectedAddonNames}. Total: $${calculateTotal()}/mes. ¿Pueden ayudarme a configurarlo?`
     window.open(
-      `mailto:soporte@tuempresa.com?subject=Solicitud de Plan Personalizado&body=${encodeURIComponent(message)}`,
+      `mailto:soporte@controldoc.app?subject=Solicitud de Plan Personalizado&body=${encodeURIComponent(message)}`,
     )
   }
 

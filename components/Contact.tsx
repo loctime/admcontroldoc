@@ -59,12 +59,12 @@ export default function Contact() {
               <div>
                 <h3 className={`font-semibold ${colors.title}`}>WhatsApp</h3>
                 <a 
-                  href="https://wa.me/5492944921510" 
+                  href="https://wa.me/5493364345088" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${colors.text} hover:text-green-500 transition-colors`}
                 >
-                  +54 9 294 492-1510
+                  +54 9 336 434-5088
                 </a>
               </div>
             </div>
@@ -86,7 +86,7 @@ export default function Contact() {
               <div className="flex space-x-4">
                 {/* WhatsApp 
                 <a
-                  href="https://wa.me/5492944921510"
+                  href="https://wa.me/5493364345088"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 bg-green-500 hover:bg-green-600 rounded-lg transition-all duration-200 hover:scale-110"

@@ -95,6 +95,15 @@ Sí. Sistema de aislamiento de datos permite a consultoras y empresas BPO gestio
 ### ¿Qué pasa si un documento es rechazado?
 El auditor deja comentario obligatorio explicando el motivo. El usuario recibe notificación, puede subir nueva versión, y todo el historial queda registrado.
 
+## Contacto
+
+- Email: soporte@controldoc.app
+- WhatsApp / Teléfono: +54 9 336 434-5088
+- Formulario de contacto y demos: https://controldoc.app/contacto
+- País sede: Argentina
+- Cobertura: Latinoamérica
+- Idioma de atención: Español
+
 ## Información de la marca
 
 - Nombre: ControlDoc
