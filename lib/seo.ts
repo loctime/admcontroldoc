@@ -61,6 +61,9 @@ export function createAppMetadata(app: PlatformApp): Metadata {
   }
 }
 
+const BUILD_DATE = new Date().toISOString().split("T")[0]
+const PUBLISHED_DATE = "2024-01-01"
+
 export function getAppSchemas(app: PlatformApp) {
   const faqSchema = app.landingContent.faq.length
     ? {
@@ -91,6 +94,12 @@ export function getAppSchemas(app: PlatformApp) {
         ],
         url: absoluteUrl("/"),
         description: app.seo.description,
+        sameAs: [
+          "https://controlapp.vercel.app",
+          "https://controlaudit.app",
+          "https://controlfile.app",
+        ],
+        foundingDate: "2024",
         areaServed: [
           "Argentina",
           "México",
@@ -103,6 +112,20 @@ export function getAppSchemas(app: PlatformApp) {
           "Ecuador",
           "España",
           "Latinoamérica",
+        ],
+        knowsAbout: [
+          "Control Documental",
+          "Gestión Documental",
+          "Document Management System (DMS)",
+          "Compliance Documental",
+          "Auditoría Documental",
+          "OCR de Documentos",
+          "Trazabilidad Documental",
+          "Control de Vencimientos",
+          "Habilitación de Contratistas",
+          "Gestión de Flota Vehicular",
+          "Legajos Digitales de RRHH",
+          "Compliance HSE y SST",
         ],
       },
       {
@@ -125,6 +148,30 @@ export function getAppSchemas(app: PlatformApp) {
           "@id": absoluteUrl("/#organization"),
         },
         keywords: [app.seo.keywords.primary, ...app.seo.keywords.secondary].join(", "),
+        datePublished: PUBLISHED_DATE,
+        dateModified: BUILD_DATE,
+        offers: {
+          "@type": "Offer",
+          price: "29",
+          priceCurrency: "USD",
+          category: "Subscription",
+          availability: "https://schema.org/InStock",
+          url: absoluteUrl("/precios"),
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "29",
+            priceCurrency: "USD",
+            unitText: "MONTH",
+            referenceQuantity: {
+              "@type": "QuantitativeValue",
+              value: "1",
+              unitCode: "MON",
+            },
+          },
+        },
+        featureList: app.landingContent.functionalities
+          .map((f) => `${f.title}: ${f.description}`)
+          .join(" | "),
         audience: app.landingContent.audiences.map((audience) => ({
           "@type": "Audience",
           audienceType: audience.title,

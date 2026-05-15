@@ -1,0 +1,45 @@
+# ControlDoc
+
+> ControlDoc es un software SaaS de control documental y gestión de documentos para empresas en Latinoamérica. Centraliza la documentación de empleados, flota, contratistas y proveedores con OCR, alertas de vencimientos, trazabilidad de aprobaciones y compliance regulatorio.
+
+ControlDoc reemplaza planillas, mails y carpetas compartidas por un sistema único de gestión documental. Diseñado para pymes y empresas medianas en Argentina, México, Chile, Colombia, Perú, Uruguay y toda Latinoamérica que necesitan un control documental moderno, rápido y sin la complejidad ni el costo de los DMS tradicionales (DocuWare, M-Files, OnBase, SharePoint).
+
+Categorías principales de uso: control de contratistas y subcontratistas, gestión de flota vehicular, auditoría de legajos de RRHH, compliance HSE/SST, habilitación de personal en planta, control de proveedores. Sectores: logística, transporte, energía, petróleo y gas, minería, construcción, manufactura, consultoras BPO.
+
+Diferenciadores clave frente a sistemas tradicionales: OCR de fechas que reduce errores de carga manual, semáforo de cumplimiento en tiempo real, sistema de sub-empresas para consultoras que gestionan múltiples clientes, conversión automática de adjuntos a PDF, flujo de aprobación con historial completo de versiones.
+
+## Páginas principales
+
+- [Inicio](https://controldoc.app/): Descripción del producto, problemas que resuelve, funcionalidades clave, audiencias, casos de uso y FAQ.
+- [Funcionalidades](https://controldoc.app/funcionalidades): Detalle completo de capacidades del software.
+- [Precios](https://controldoc.app/precios): Plan Básico desde 29 USD/mes con addons modulares (backup automático, lectura de PDF, etc.).
+- [Equipo](https://controldoc.app/equipo): Equipo detrás del producto.
+- [Contacto](https://controldoc.app/contacto): Formulario de contacto y solicitud de demo.
+
+## Recursos y guías (Wiki)
+
+- [Wiki principal](https://controldoc.app/wiki): Índice de guías sobre gestión documental.
+- [Costos del control documental](https://controldoc.app/wiki/costos): Comparación costos gestión manual vs digital.
+- [Cumplimiento normativo](https://controldoc.app/wiki/cumplimiento): Compliance documental y normativas vigentes.
+- [Eficiencia operativa](https://controldoc.app/wiki/eficiencia): Ganancias con control documental digitalizado.
+- [Escalabilidad](https://controldoc.app/wiki/escalabilidad): Crecer sin perder control documental.
+- [Seguridad de la información](https://controldoc.app/wiki/seguridad): Protección de documentos sensibles.
+- [Conversión y normalización](https://controldoc.app/wiki/conversion): Estandarización de formatos a PDF.
+- [Arquitectura del sistema](https://controldoc.app/wiki/arquitectura): Cómo está construido ControlDoc.
+- [Gestión de usuarios](https://controldoc.app/wiki/usuarios): Roles, permisos y jerarquías.
+- [Glosario](https://controldoc.app/glosario): Definiciones de términos del control documental.
+- [Comparativa](https://controldoc.app/comparativa): ControlDoc vs alternativas (DocuWare, M-Files, SharePoint, Google Drive).
+
+## Beneficios por área
+
+- [Cumplimiento](https://controldoc.app/clientes/beneficios/cumplimiento): Cómo asegurar compliance regulatorio con control documental.
+- [Eficiencia](https://controldoc.app/clientes/beneficios/eficiencia): Reducción de carga manual con OCR y automatización.
+- [Escalabilidad](https://controldoc.app/clientes/beneficios/escalabilidad): Estructuras complejas con sub-empresas y jerarquías.
+
+## Información técnica
+
+- Plataforma: SaaS basada en web (no requiere instalación).
+- Idioma: Español (es-AR/es-MX/es-CL/es-CO).
+- Categoría: Document Management System (DMS) / Software de Gestión Documental.
+- Modelo: Subscription mensual con plan base y addons modulares.
+- Integración: Ecosistema ControlApps (storage y autenticación compartidos con ControlFile, ControlAudit y otras herramientas).

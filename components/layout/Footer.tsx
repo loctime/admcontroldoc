@@ -5,7 +5,8 @@ export default function Footer() {
   const navigation = {
     product: [
       { name: "Funcionalidades", href: "/funcionalidades" },
-      { name: "Panel", href: "/dashboard" },
+      { name: "Comparativa", href: "/comparativa" },
+      { name: "Glosario", href: "/glosario" },
       { name: "Contacto", href: "/contacto" },
     ],
     company: [

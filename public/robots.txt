@@ -5,6 +5,146 @@ Disallow: /admin
 Disallow: /login
 Disallow: /dashboard
 
+# GPTBot
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# OAI-SearchBot
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Claude-Web
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Perplexity-User
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# GoogleOther
+User-agent: GoogleOther
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Applebot-Extended
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Bytespider
+User-agent: Bytespider
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# CCBot
+User-agent: CCBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Meta-ExternalAgent
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Meta-ExternalFetcher
+User-agent: Meta-ExternalFetcher
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# DuckAssistBot
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# YouBot
+User-agent: YouBot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# cohere-ai
+User-agent: cohere-ai
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Amazonbot
+User-agent: Amazonbot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /dashboard
+
 # Host
 Host: https://controldoc.app
 

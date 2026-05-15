@@ -1,0 +1,104 @@
+# ControlDoc — Software de Control y Gestión Documental
+
+> Plataforma SaaS de control documental y gestión de documentos para empresas en Latinoamérica. Centraliza documentación de empleados, flota, contratistas y proveedores con OCR, alertas de vencimientos, trazabilidad de aprobaciones y compliance regulatorio.
+
+## Qué es ControlDoc
+
+ControlDoc es un software de control documental (también llamado sistema de gestión documental o DMS — Document Management System) diseñado para pymes y empresas medianas en Latinoamérica. La plataforma reemplaza el caos de planillas Excel, carpetas compartidas y mails por un sistema único que cubre el ciclo completo del documento:
+
+1. **Digitalización**: subida de archivos en cualquier formato (imágenes, Word, Excel, PDF) con conversión automática a PDF estandarizado.
+2. **Auditoría con OCR**: el sistema escanea cada documento y propone fechas de vencimiento; el operador solo verifica.
+3. **Aprobación con trazabilidad**: cada documento sigue un flujo Pendiente → Aprobado/Rechazado con comentarios obligatorios y registro histórico de versiones.
+4. **Control de vencimientos**: semáforo en tiempo real (verde/amarillo/rojo) y notificaciones automáticas por email a responsables.
+5. **Reportes para auditoría externa**: exportables con quién aprobó qué, cuándo y con qué evidencia.
+
+## Para qué tipo de empresas
+
+- **Operaciones y Logística**: mantener flota vehicular habilitada (seguros, VTV, licencias de conducir) sin riesgo operativo.
+- **Recursos Humanos y Seguridad e Higiene**: auditar contratos, carnets profesionales, exámenes médicos y capacitaciones del personal.
+- **Empresas BPO, consultoras y outsourcing**: gestionar documentación de múltiples clientes con aislamiento de datos y dashboards dedicados.
+- **Contratistas y proveedores**: validar que cada empresa externa cumpla con seguros, aportes y documentación antes de acceso a planta.
+
+## Sectores
+
+Logística, transporte, energía, petróleo y gas, minería, construcción, manufactura, industria, agro, retail, consultoras, BPO, outsourcing.
+
+## Países
+
+Argentina, México, Chile, Colombia, Perú, Uruguay, Paraguay, Bolivia, Ecuador, España. Idioma principal: español.
+
+## Funcionalidades
+
+### Tablero de control visual
+Semáforo de cumplimiento en tiempo real. Clasifica documentos en vencidos, próximos a vencer y pendientes de auditoría.
+
+### Auditoría asistida (OCR)
+El sistema lee adjuntos y propone fechas de vencimiento automáticamente. El operador verifica en segundos en lugar de transcribir manualmente. Reduce errores humanos y acelera el proceso de carga.
+
+### Flujo de trabajo y control de versiones
+Cada documento tiene ciclo de vida: Pendiente, Aprobado o Rechazado con comentario obligatorio. Historial completo de versiones para cumplir con cualquier auditoría externa.
+
+### Normalización de archivos
+Conversión automática de imágenes, Word y Excel a PDF. Mantiene un repositorio documental profesional y uniforme.
+
+### Jerarquías y sub-empresas
+Configuración de estructuras complejas. Documentos requeridos a nivel organización completa o por subcontratista específico. Aislamiento de datos para consultoras que gestionan múltiples clientes.
+
+### Notificaciones de compliance
+Alertas proactivas vía email a responsables de área. El equipo actúa antes de que un documento cambie a estado crítico.
+
+## Casos de uso reales
+
+### Control de contratistas
+Asegurá que tus proveedores cumplan con normativa antes de ingresar a planta. Centralizá recepción y auditoría de seguros, aportes patronales, ART, formularios SRT.
+
+### Gestión de flota vehicular
+Centralizá documentación técnica y legal de unidades. Vinculá choferes a vehículos. Controlá vencimientos de VTV, seguros, RTO, habilitación de carga peligrosa.
+
+### Auditoría de legajos de RRHH
+Digitalizá toda la documentación de personal: contratos, exámenes preocupacionales, recibos de sueldo, certificaciones técnicas, capacitaciones obligatorias.
+
+## Precios
+
+Plan Básico: 29 USD por mes.
+
+Addons modulares disponibles:
+- Backup Automático: 12 USD/mes (respaldo diario de datos).
+- Lectura de PDF: 18 USD/mes (extracción y análisis de contenido).
+- Otros addons configurables según necesidad.
+
+Modelo de suscripción mensual sin contrato anual obligatorio. Soporte incluido en todos los planes.
+
+## Preguntas frecuentes
+
+### ¿Qué es un software de control documental?
+Un software de control documental (también conocido como sistema de gestión documental o DMS) es una plataforma que centraliza la digitalización, almacenamiento, auditoría y control de vencimientos de la documentación de una empresa. ControlDoc cubre todo el ciclo con OCR, trazabilidad de versiones, alertas automáticas y compliance regulatorio.
+
+### ¿Cuál es la diferencia entre control documental y gestión documental?
+La gestión documental abarca todo el ciclo del documento (creación, almacenamiento, recuperación, archivo). El control documental se enfoca en garantizar la vigencia, aprobación y trazabilidad de cada documento crítico. ControlDoc combina ambas.
+
+### ¿Sirve para empresas en México, Chile, Colombia o Perú?
+Sí. ControlDoc opera como SaaS en toda Latinoamérica y se adapta a las normativas locales de RRHH, HSE y compliance corporativo de cada país.
+
+### ¿Funciona para pymes o solo para empresas grandes?
+Funciona para ambos. Las pymes acceden a un sistema profesional sin la complejidad ni el costo de los DMS tradicionales. Las empresas medianas y consultoras BPO usan las jerarquías y sub-empresas para gestionar múltiples clientes.
+
+### ¿Cómo elegir un software de gestión documental?
+Tres criterios clave: facilidad de uso (que el equipo lo adopte sin capacitación eterna), automatización (OCR, alertas, conversión a PDF) y trazabilidad real (historial de versiones, registro de aprobaciones, exportable para auditorías externas).
+
+### ¿Cómo se diferencia de DocuWare, M-Files o SharePoint?
+DocuWare y M-Files son DMS empresariales con curva de aprendizaje alta y precios desde varios cientos de USD/mes. SharePoint requiere configuración compleja y no está diseñado para control de vencimientos. ControlDoc ofrece la funcionalidad esencial de control documental con UX moderna y precio accesible para pymes.
+
+### ¿Es seguro para manejar datos de múltiples clientes?
+Sí. Sistema de aislamiento de datos permite a consultoras y empresas BPO gestionar documentación de sus clientes sin riesgo de cruce de información.
+
+### ¿Qué pasa si un documento es rechazado?
+El auditor deja comentario obligatorio explicando el motivo. El usuario recibe notificación, puede subir nueva versión, y todo el historial queda registrado.
+
+## Información de la marca
+
+- Nombre: ControlDoc
+- Sinónimos / alternateName: Software de Control Documental, Sistema de Gestión Documental, ControlDoc DMS, Plataforma de Gestión Documental
+- URL: https://controldoc.app
+- Ecosistema: parte de ControlApps (suite que incluye ControlFile, ControlAudit y otras herramientas operativas con storage y autenticación compartidos).
+- Sitio del ecosistema: https://controlapp.vercel.app
