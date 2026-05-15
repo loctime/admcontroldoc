@@ -87,13 +87,13 @@ const rows: Row[] = [
     ],
   },
   {
-    feature: "Precio inicial (USD/mes)",
+    feature: "Modelo de precios",
     cells: [
-      { value: "29", note: "Por suscripción" },
-      { value: "300+" },
-      { value: "500+" },
-      { value: "Incluido en M365" },
-      { value: "6" },
+      { value: "A medida", note: "Cotización según necesidades" },
+      { value: "Enterprise", note: "Desde varios cientos USD/mes" },
+      { value: "Enterprise", note: "Desde varios cientos USD/mes" },
+      { value: "M365" },
+      { value: "Por GB" },
     ],
   },
   {

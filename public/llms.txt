@@ -12,7 +12,7 @@ Diferenciadores clave frente a sistemas tradicionales: OCR de fechas que reduce 
 
 - [Inicio](https://controldoc.app/): Descripción del producto, problemas que resuelve, funcionalidades clave, audiencias, casos de uso y FAQ.
 - [Funcionalidades](https://controldoc.app/funcionalidades): Detalle completo de capacidades del software.
-- [Precios](https://controldoc.app/precios): Plan Básico desde 29 USD/mes con addons modulares (backup automático, lectura de PDF, etc.).
+- [Precios](https://controldoc.app/precios): Cotización personalizada por contacto — adaptada a tamaño de empresa, usuarios y funcionalidades.
 - [Equipo](https://controldoc.app/equipo): Equipo detrás del producto.
 - [Contacto](https://controldoc.app/contacto): Formulario de contacto y solicitud de demo.
 
@@ -41,5 +41,5 @@ Diferenciadores clave frente a sistemas tradicionales: OCR de fechas que reduce 
 - Plataforma: SaaS basada en web (no requiere instalación).
 - Idioma: Español (es-AR/es-MX/es-CL/es-CO).
 - Categoría: Document Management System (DMS) / Software de Gestión Documental.
-- Modelo: Subscription mensual con plan base y addons modulares.
+- Modelo: Subscription mensual, cotización personalizada por contacto.
 - Integración: Ecosistema ControlApps (storage y autenticación compartidos con ControlFile, ControlAudit y otras herramientas).

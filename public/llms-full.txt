@@ -60,14 +60,9 @@ Digitalizá toda la documentación de personal: contratos, exámenes preocupacio
 
 ## Precios
 
-Plan Básico: 29 USD por mes.
+ControlDoc trabaja con cotización personalizada según tamaño de empresa, cantidad de usuarios, volumen documental y funcionalidades requeridas. Para recibir una propuesta concreta, contactar a soporte@controldoc.app o por WhatsApp al +54 9 336 434-5088.
 
-Addons modulares disponibles:
-- Backup Automático: 12 USD/mes (respaldo diario de datos).
-- Lectura de PDF: 18 USD/mes (extracción y análisis de contenido).
-- Otros addons configurables según necesidad.
-
-Modelo de suscripción mensual sin contrato anual obligatorio. Soporte incluido en todos los planes.
+Modelo: suscripción mensual SaaS. Soporte y actualizaciones incluidos.
 
 ## Preguntas frecuentes
 

@@ -172,21 +172,13 @@ export function getAppSchemas(app: PlatformApp) {
         dateModified: BUILD_DATE,
         offers: {
           "@type": "Offer",
-          price: "29",
-          priceCurrency: "USD",
           category: "Subscription",
           availability: "https://schema.org/InStock",
-          url: absoluteUrl("/precios"),
+          url: absoluteUrl("/contacto"),
           priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "29",
-            priceCurrency: "USD",
-            unitText: "MONTH",
-            referenceQuantity: {
-              "@type": "QuantitativeValue",
-              value: "1",
-              unitCode: "MON",
-            },
+            "@type": "PriceSpecification",
+            description:
+              "Cotización personalizada según tamaño de empresa, cantidad de usuarios y funcionalidades. Consultar en /contacto.",
           },
         },
         featureList: app.landingContent.functionalities
